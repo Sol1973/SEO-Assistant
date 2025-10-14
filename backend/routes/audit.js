@@ -5,6 +5,7 @@
 
 const express = require('express');
 const router = express.Router();
+const { startAudit, getAuditResults } = require('../controllers/auditController');
 
 /**
  * POST /api/audit
@@ -21,16 +22,8 @@ router.post('/', async (req, res) => {
       });
     }
 
-    // TODO: Implementar lógica de auditoría
-    res.json({
-      success: true,
-      message: 'Audit started',
-      data: {
-        url,
-        status: 'pending',
-        auditId: Date.now().toString()
-      }
-    });
+    const result = await startAudit(url);
+    res.json(result);
   } catch (error) {
     res.status(500).json({
       error: 'Internal Server Error',
@@ -46,20 +39,8 @@ router.post('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-
-    // TODO: Implementar lógica de consulta
-    res.json({
-      success: true,
-      data: {
-        auditId: id,
-        status: 'completed',
-        results: {
-          metaTags: { score: 85 },
-          headings: { score: 90 },
-          images: { score: 75 }
-        }
-      }
-    });
+    const result = await getAuditResults(id);
+    res.json(result);
   } catch (error) {
     res.status(500).json({
       error: 'Internal Server Error',

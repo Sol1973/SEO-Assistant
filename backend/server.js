@@ -10,6 +10,9 @@ const morgan = require('morgan');
 const path = require('path');
 require('dotenv').config();
 
+// Initialize database
+require('./models/database');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
