@@ -1,0 +1,98 @@
+/**
+ * SEO ASSISTANT - SERVER PRINCIPAL
+ * Servidor Express para la aplicación web local
+ */
+
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const morgan = require('morgan');
+const path = require('path');
+require('dotenv').config();
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// ============================================
+// MIDDLEWARE
+// ============================================
+
+// Seguridad
+app.use(helmet());
+
+// CORS
+app.use(cors());
+
+// Logging
+app.use(morgan('dev'));
+
+// Body parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Archivos estáticos
+app.use(express.static(path.join(__dirname, '../frontend')));
+
+// ============================================
+// RUTAS
+// ============================================
+
+// Ruta principal
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
+
+// API Health Check
+app.get('/api/health', (req, res) => {
+  res.json({
+    status: 'OK',
+    message: 'SEO Assistant API is running',
+    version: '0.1.0',
+    timestamp: new Date().toISOString()
+  });
+});
+
+// API Routes (placeholder)
+app.use('/api/audit', require('./routes/audit'));
+app.use('/api/keywords', require('./routes/keywords'));
+app.use('/api/reports', require('./routes/reports'));
+
+// ============================================
+// ERROR HANDLING
+// ============================================
+
+// 404 Handler
+app.use((req, res) => {
+  res.status(404).json({
+    error: 'Not Found',
+    message: `Route ${req.url} not found`
+  });
+});
+
+// Global Error Handler
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({
+    error: 'Internal Server Error',
+    message: err.message
+  });
+});
+
+// ============================================
+// START SERVER
+// ============================================
+
+app.listen(PORT, () => {
+  console.log(`
+╔════════════════════════════════════════════╗
+║   SEO ASSISTANT - Server Running 🚀       ║
+╠════════════════════════════════════════════╣
+║   Port: ${PORT}                              ║
+║   URL: http://localhost:${PORT}              ║
+║   Environment: ${process.env.NODE_ENV || 'development'}           ║
+╚════════════════════════════════════════════╝
+  `);
+});
+
+module.exports = app;
+

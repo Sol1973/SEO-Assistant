@@ -19,13 +19,14 @@ Thumbs.db
 *.swo
 *.swn
 
-# Node.js (para futuro desarrollo)
+# Node.js
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 package-lock.json
 yarn.lock
+.pnpm-debug.log
 
 # Python
 __pycache__/
@@ -57,8 +58,15 @@ temp/
 # Archivos de configuración sensibles
 .env
 .env.local
+.env.development
+.env.production
 config.local.js
 secrets.json
+
+# Data
+data/
+*.db
+*.sqlite
 
 # Build y distribución
 dist/

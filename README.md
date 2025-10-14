@@ -54,19 +54,48 @@ Una aplicación web local portable que realiza auditorías SEO completas, genera
 
 ## 🚀 **CÓMO USAR ESTE PROYECTO**
 
-### **PASO 1: LEER LA DOCUMENTACIÓN**
+### **OPCIÓN A: PARA USUARIOS (Usar la Aplicación)**
+
+**Próximamente:** Descarga la aplicación para tu sistema operativo.
+
+### **OPCIÓN B: PARA DESARROLLADORES (Contribuir al Proyecto)**
+
+#### **1. Instalación Rápida:**
+```bash
+# Clonar repositorio
+git clone https://github.com/Sol1973/SEO-Assistant.git
+cd SEO-Assistant
+
+# Instalar dependencias
+npm install
+
+# Configurar variables de entorno
+cp config/env.example .env
+
+# Iniciar servidor de desarrollo
+npm run dev
+
+# Abrir navegador en http://localhost:3000
+```
+
+#### **2. Leer Documentación de Desarrollo:**
+- **[DEVELOPMENT.md](DEVELOPMENT.md)** - Guía completa para desarrolladores
+- **[API Endpoints](DEVELOPMENT.md#api-endpoints)** - Documentación de la API
+- **[Testing](DEVELOPMENT.md#testing)** - Cómo ejecutar tests
+
+#### **3. Explorar Documentación del Proyecto:**
 1. **Empezar con:** `ANALISIS_COMPLETO_PROYECTO.md`
 2. **Entender la guía SEO:** `GUIA_COMPLETA_SEO_2024.md`
 3. **Revisar la documentación técnica:** `DOCUMENTACION_SEO_ASSISTANT.md`
 4. **Analizar costos:** `ANALISIS_COSTOS_ALTERNATIVAS.md`
 
-### **PASO 2: EXPLORAR EJEMPLOS**
+#### **4. Explorar Ejemplos:**
 1. **Revisar el sitio ejemplo:** `ejemplos/index.html`
 2. **Analizar la estructura:** `ejemplos/sitemap.xml`
 3. **Ver configuraciones:** `ejemplos/robots.txt`
 4. **Estudiar formularios:** `ejemplos/contacto.html`
 
-### **PASO 3: USAR HERRAMIENTAS**
+#### **5. Usar Herramientas:**
 1. **Keyword research:** `guias/config/keyword_research.py`
 2. **Análisis de competencia:** `guias/config/competitor_analyzer.py`
 3. **Configuraciones:** `guias/config/`
@@ -82,18 +111,34 @@ Una aplicación web local portable que realiza auditorías SEO completas, genera
 - ✅ **Scripts de análisis** (keyword research, competencia)
 - ✅ **Análisis de costos** (hosting, dominios, alternativas)
 - ✅ **Arquitectura técnica** (especificada completamente)
+- ✅ **Estructura del proyecto** (backend + frontend)
+- ✅ **API endpoints básicos** (audit, keywords, reports)
+- ✅ **Interfaz frontend funcional** (HTML/CSS/JS)
+- ✅ **Configuración de desarrollo** (ESLint, Prettier, Jest)
+- ✅ **Sistema de tests** (estructura y configuración)
 
 ### **⚠️ EN DESARROLLO:**
-- ⚠️ **Código fuente** (0% implementado)
-- ⚠️ **Base de datos** (0% creada)
-- ⚠️ **Interfaz de usuario** (0% desarrollada)
-- ⚠️ **Testing** (0% implementado)
+- ⚠️ **Lógica de auditoría** (pendiente implementación)
+- ⚠️ **Base de datos SQLite** (pendiente esquema)
+- ⚠️ **Generación de reportes PDF** (pendiente)
+- ⚠️ **Tests unitarios** (estructura creada)
 
 ### **📅 PRÓXIMOS PASOS:**
 1. **Implementar MVP** (4 semanas)
+   - Lógica de auditoría SEO
+   - Integración con Puppeteer
+   - Sistema de reportes básico
 2. **Desarrollar funcionalidades core** (4 semanas)
+   - Keyword research funcional
+   - Tracking de rankings
+   - Base de datos completa
 3. **Testing y optimización** (2 semanas)
+   - Tests unitarios e integración
+   - Optimización de performance
+   - Caché de resultados
 4. **Packaging y distribución** (1 semana)
+   - Electron app
+   - Builds multi-plataforma
 
 ---
 
