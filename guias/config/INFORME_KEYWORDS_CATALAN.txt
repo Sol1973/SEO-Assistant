@@ -1,0 +1,96 @@
+================================================================================
+INVESTIGACIÓN DE KEYWORDS EN CATALÁN
+Fecha: 13 de octubre de 2025
+================================================================================
+
+🎯 KEYWORDS PRIMARIAS EN CATALÁN (Alta prioridad)
+--------------------------------------------------------------------------------
+✅ cuidadora persones grans tarragona
+   Traducción: cuidadora personas mayores tarragona
+   Volumen: 100-200 | Dificultad: Media | CPC: €2.50-€5.00
+   Nota: Keyword principal en catalán
+
+✅ cuidadora gent gran tarragona
+   Traducción: cuidadora gente mayor tarragona
+   Volumen: 80-150 | Dificultad: Media | CPC: €2.00-€4.00
+   Nota: Variante común en catalán
+
+✅ atenció domiciliària tarragona
+   Traducción: atención domiciliaria tarragona
+   Volumen: 60-120 | Dificultad: Media | CPC: €2.50-€5.00
+   Nota: Servicio específico
+
+✅ cuidadora a domicili tarragona
+   Traducción: cuidadora a domicilio tarragona
+   Volumen: 50-100 | Dificultad: Media | CPC: €2.00-€4.00
+   Nota: Búsqueda transaccional
+
+
+📊 COMPARACIÓN CASTELLANO vs CATALÁN
+--------------------------------------------------------------------------------
+Volumen Castellano: 1000-2000 búsquedas/mes
+Volumen Catalán: 300-600 búsquedas/mes
+Ratio: 30-40% del volumen castellano
+
+Competencia Castellano: Alta (muchas plataformas nacionales)
+Competencia Catalán: Media-Baja (menos competidores locales)
+Oportunidad: ALTA - Más fácil posicionarse en catalán
+
+
+🚀 ESTRATEGIA PARA CATALÁN
+--------------------------------------------------------------------------------
+Prioridad de Keywords:
+  1. cuidadora persones grans tarragona
+  2. cuidadora gent gran tarragona
+  3. atenció domiciliària tarragona
+  4. cuidadora a domicili tarragona
+  5. tècnic sociosanitari tarragona
+
+Title Tag Recomendado:
+  Cuidadora Persones Grans Tarragona | Tècnica Sociosanitària | Carmen Alvarado
+
+H1 Recomendado:
+  Cuidadora de Persones Grans a Tarragona | Tècnica Sociosanitària Titulada
+
+Meta Description:
+  Cuidadora professional i tècnica sociosanitària titulada a Tarragona. Atenció domiciliària personalitzada per a persones grans i dependents. Disponibilitat immediata.
+
+
+📁 ARCHIVOS A CREAR
+--------------------------------------------------------------------------------
+✅ index-ca.html
+   Página principal en catalán
+   Keywords: cuidadora persones grans tarragona, tècnic sociosanitari tarragona, atenció domiciliària tarragona
+
+✅ contacto-ca.html
+   Página de contacto en catalán
+   Keywords: contacte cuidadora tarragona, tècnic sociosanitari contacte
+
+✅ ayuda-ca.html
+   Página Te Ayudamos en catalán
+   Keywords: ajuda cura persones grans, consells cuidadors
+
+✅ gracias-ca.html
+   Página de agradecimiento en catalán
+
+
+⚙️ CONSIDERACIONES SEO MULTIIDIOMA
+--------------------------------------------------------------------------------
+✅ Hreflang
+   Prioridad: ALTA
+   Nota: Esencial para SEO multiidioma
+
+✅ Canonical URL
+   Prioridad: ALTA
+
+✅ Lang attribute
+   Prioridad: ALTA
+   Nota: Cambiar de 'es' a 'ca' en versión catalana
+
+✅ Selector de idioma
+   Prioridad: ALTA
+
+
+================================================================================
+FIN DEL INFORME
+================================================================================

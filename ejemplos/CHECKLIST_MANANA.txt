@@ -1,0 +1,159 @@
+═══════════════════════════════════════════════════════════════════
+  ✅ CHECKLIST RÁPIDO - INSTALACIÓN MAÑANA (13 OCT 2025)
+═══════════════════════════════════════════════════════════════════
+
+📍 DOMINIO: carmenalvarado.es
+📍 SERVIDOR: Hostinger (82.29.87.172)
+📍 TIEMPO ESTIMADO: 30-60 minutos
+
+───────────────────────────────────────────────────────────────────
+🔍 PASO 0: VERIFICAR DNS (PRIMERO)
+───────────────────────────────────────────────────────────────────
+
+En tu Terminal:
+  cd /Users/micky/Documents/Proyectos_IA/CV_Carmen/trabajo_temporal/web_carmen
+  ./verificar_dns.sh
+
+✅ Si dice "DNS PROPAGADO" → Continúa al PASO 1
+❌ Si dice "NO propagado" → Espera 2-4 horas más y vuelve a verificar
+
+───────────────────────────────────────────────────────────────────
+🚀 PASO 1: INSTALAR WORDPRESS (5 min)
+───────────────────────────────────────────────────────────────────
+
+□ Ir a: https://hpanel.hostinger.com
+□ Login con tus credenciales
+□ Buscar dominio: carmenalvarado.es
+□ Clic: "Instalar WordPress" o "Auto Installer"
+□ Configurar:
+    Título: Carmen Alvarado - Cuidadora Profesional Tarragona
+    Usuario: carmen_admin
+    Email: calvarado1873@gmail.com
+    Idioma: Español
+□ Clic "Instalar" y esperar
+□ GUARDAR credenciales de admin
+
+───────────────────────────────────────────────────────────────────
+📦 PASO 2: SUBIR ARCHIVOS HTML (10 min)
+───────────────────────────────────────────────────────────────────
+
+OPCIÓN A - Por Administrador Archivos Hostinger:
+  □ Panel Hostinger → Administrador de Archivos
+  □ Ir a: public_html/
+  □ Subir archivo: carmen_web_completa.zip
+  □ Clic derecho → Extraer
+  □ Verificar que estén todos los archivos
+
+OPCIÓN B - Por FTP (FileZilla):
+  □ Host: ftp.carmenalvarado.es
+  □ Usuario: u375945539
+  □ Puerto: 21
+  □ Subir carpetas a /public_html/:
+      - index.html
+      - ayuda.html
+      - css/
+      - js/
+      - images/
+      - sitemap.xml
+      - robots.txt
+
+───────────────────────────────────────────────────────────────────
+🔌 PASO 3: INSTALAR PLUGINS (10 min)
+───────────────────────────────────────────────────────────────────
+
+□ Login: https://carmenalvarado.es/wp-admin
+□ Plugins → Añadir nuevo → Instalar cada uno:
+    □ Yoast SEO
+    □ Elementor
+    □ WPForms Lite
+    □ Really Simple SSL
+    □ WP Super Cache
+
+───────────────────────────────────────────────────────────────────
+🎨 PASO 4: CONFIGURAR TEMA (5 min)
+───────────────────────────────────────────────────────────────────
+
+□ Apariencia → Temas → Añadir nuevo
+□ Buscar: "Astra"
+□ Instalar y Activar
+□ Personalizar → Colores:
+    Primario: #2E7D9C
+    Acento: #E89B5F
+
+───────────────────────────────────────────────────────────────────
+🔍 PASO 5: CONFIGURAR SEO (10 min)
+───────────────────────────────────────────────────────────────────
+
+□ SEO → General → Configuración inicial
+□ Páginas → Inicio → Scroll abajo → Yoast SEO:
+    Título: Cuidadora Personas Mayores Tarragona | Carmen Alvarado
+    Descripción: Cuidadora profesional en Tarragona. Atención a 
+    domicilio personalizada. Titulada sociosanitaria. ☎️ 611 230 547
+    Frase clave: cuidadora personas mayores tarragona
+
+───────────────────────────────────────────────────────────────────
+✅ PASO 6: PRUEBAS FINALES (10 min)
+───────────────────────────────────────────────────────────────────
+
+□ Abrir: https://carmenalvarado.es
+□ Verificar que carga correctamente
+□ Test botón WhatsApp flotante
+□ Test botón Llamar
+□ Test formulario contacto (enviar prueba)
+□ Abrir desde móvil
+□ Verificar "Te Ayudamos" abre modales
+
+───────────────────────────────────────────────────────────────────
+📊 PASO 7: GOOGLE SEARCH CONSOLE (10 min)
+───────────────────────────────────────────────────────────────────
+
+□ Ir a: https://search.google.com/search-console
+□ Añadir propiedad: https://carmenalvarado.es
+□ Verificar con método HTML
+□ Enviar sitemap: sitemap_index.xml
+
+───────────────────────────────────────────────────────────────────
+🌐 PASO 8: GOOGLE MY BUSINESS (20 min)
+───────────────────────────────────────────────────────────────────
+
+□ Ir a: https://business.google.com
+□ Crear perfil empresa:
+    Nombre: Carmen Alvarado - Cuidadora Profesional
+    Categoría: Servicio de cuidado a domicilio
+    Áreas: Tarragona, Reus
+    Teléfono: 611 230 547
+    Web: https://carmenalvarado.es
+□ Verificar perfil
+□ Subir fotos (mínimo 3)
+
+───────────────────────────────────────────────────────────────────
+🎉 ¡LISTO! TU WEB ESTÁ ONLINE
+───────────────────────────────────────────────────────────────────
+
+URL FINAL: https://carmenalvarado.es
+
+Próximos días:
+  □ Conseguir fotos profesionales de Carmen
+  □ Pedir primeras reseñas Google
+  □ Compartir con familia/amigos
+  □ Testear todo exhaustivamente
+
+═══════════════════════════════════════════════════════════════════
+
+📱 CONTACTO EMERGENCIA:
+   Soporte Hostinger 24/7: https://www.hostinger.es/contacto
+   Email Carmen: calvarado1873@gmail.com
+
+═══════════════════════════════════════════════════════════════════
+
+✨ TODO EL CONTENIDO YA ESTÁ PERFECTO Y LISTO ✨
+
+📦 Archivos preparados en:
+   /Users/micky/Documents/Proyectos_IA/CV_Carmen/trabajo_temporal/web_carmen/
+
+📚 Guía detallada en: INSTALACION_MANANA.md
+🔍 Script verificación DNS: ./verificar_dns.sh
+📦 Paquete completo web: carmen_web_completa.zip
+
+═══════════════════════════════════════════════════════════════════
+

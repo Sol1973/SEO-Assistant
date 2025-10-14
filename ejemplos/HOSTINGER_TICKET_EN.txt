@@ -1,0 +1,68 @@
+Subject: Need help editing footer in Twenty Twenty-Five theme on carmenalvarado.es
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Hello Hostinger Support Team,
+
+I urgently need help with my website carmenalvarado.es. I'm trying to customize the footer but the changes are not being applied.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔴 PROBLEM:
+
+The footer on my site shows 4 sections:
+1. "Carmen Alvarado" (want to keep)
+2. "Acerca de" / About (want to hide)
+3. "Privacidad" / Privacy (want to hide)
+4. "Social" (want to hide)
+
+I need the footer to show ONLY "Carmen Alvarado" and "Cuidadora Profesional en Tarragona" centered.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ WHAT I'VE TRIED (without success):
+
+1. Added custom CSS to the theme
+2. Used WordPress Customizer (Additional CSS)
+3. Created a functions.php file with inline CSS
+4. Purged LiteSpeed Cache multiple times
+5. Tried editing from the Block Editor
+
+ADDITIONAL PROBLEM: When I try to save changes in the Block Editor (Appearance -> Editor), it shows "Review 1 change" but doesn't save. The save button doesn't work.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 SITE INFORMATION:
+
+Domain: carmenalvarado.es
+WordPress: 6.8.3
+Theme: Twenty Twenty-Five (FSE block theme)
+Active plugins:
+  - LiteSpeed Cache 7.5.0.1
+  - WPForms Lite 1.9.8.1
+  - WP Mail SMTP 4.6.0
+  - Hostinger Reach
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ WHAT I NEED:
+
+Could you help me edit the footer template to show only the first column ("Carmen Alvarado" and "Cuidadora Profesional en Tarragona") and hide the other sections?
+
+I would also like to know why the Block Editor is not saving changes.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📸 SCREENSHOTS:
+
+Attached screenshots showing:
+1. Current footer with 4 columns
+2. Error when trying to save in Block Editor
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Thank you very much for your help.
+
+Best regards,
+Miguel
+

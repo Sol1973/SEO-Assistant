@@ -1,0 +1,24 @@
+CONSULTA TÉCNICA - HOSTINGER
+
+Dominio: carmenalvarado.es
+Usuario: u375945539
+
+PROBLEMA:
+Los formularios de contacto de WordPress no envían emails.
+
+CONFIGURACIÓN ACTUAL:
+- WP Mail SMTP configurado con smtp.hostinger.com
+- Email del dominio: info@carmenalvarado.es
+- Destino: calvarado1873@gmail.com
+
+RESULTADO:
+No llegan emails, sin errores específicos.
+
+PREGUNTA:
+¿Por qué WordPress no puede enviar emails a través del servidor?
+
+SOLUCIÓN SOLICITADA:
+Configuración para que WordPress envíe emails correctamente.
+
+Contacto: calvarado1873@gmail.com
+Teléfono: 611 230 547

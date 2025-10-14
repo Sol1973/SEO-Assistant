@@ -1,0 +1,46 @@
+<!-- SNIPPET DE GOOGLE ANALYTICS PARA AGREGAR EN TODAS LAS PÁGINAS -->
+
+<!-- 
+PASO 1: Crear cuenta en Google Analytics
+1. Ve a: https://analytics.google.com/
+2. Crea cuenta: "Carmen Alvarado"
+3. Crea propiedad: "carmenalvarado.es"
+4. Zona horaria: España (Madrid)
+5. Moneda: EUR (€)
+6. Flujo de datos: Web
+7. URL: https://carmenalvarado.es
+8. Te darán un ID como: G-XXXXXXXXXX
+
+PASO 2: Copiar este código y reemplazar G-XXXXXXXXXX con tu ID real
+-->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- 
+PASO 3: Agregar este código en el <head> de TODAS las páginas (antes del </head>):
+
+Páginas ES:
+- index.html
+- contacto.html
+- ayuda.html
+- consejos.html
+- gracias.html
+
+Páginas CA:
+- index-ca.html
+- contacte-ca.html
+- ajuda-ca.html
+- consells-ca.html
+- gracies-ca.html
+
+PASO 4: Subir las páginas actualizadas al servidor
+-->
+

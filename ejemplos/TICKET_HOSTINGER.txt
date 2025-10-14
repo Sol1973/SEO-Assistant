@@ -1,0 +1,68 @@
+Asunto: Necesito ayuda para editar el footer del tema Twenty Twenty-Five en carmenalvarado.es
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Hola equipo de Hostinger,
+
+Necesito ayuda urgente con mi sitio web carmenalvarado.es. Estoy intentando personalizar el footer pero no logro que los cambios se apliquen.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔴 PROBLEMA:
+
+El footer de mi sitio muestra 4 secciones:
+1. "Carmen Alvarado" (quiero mantener)
+2. "Acerca de" (quiero ocultar)
+3. "Privacidad" (quiero ocultar)
+4. "Social" (quiero ocultar)
+
+Necesito que el footer muestre SOLO "Carmen Alvarado" y "Cuidadora Profesional en Tarragona" centrado.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ LO QUE HE INTENTADO (sin éxito):
+
+1. Añadir CSS personalizado al tema
+2. Usar el Customizer de WordPress (Additional CSS)
+3. Crear un archivo functions.php con CSS inline
+4. Purgar el caché de LiteSpeed múltiples veces
+5. Intentar editar desde el Editor de Bloques
+
+PROBLEMA ADICIONAL: Cuando intento guardar cambios en el Editor de Bloques (Apariencia -> Editor), aparece el mensaje "Revisar 1 cambio" pero no se guarda. El botón de guardar no funciona.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 INFORMACIÓN DEL SITIO:
+
+Dominio: carmenalvarado.es
+WordPress: 6.8.3
+Tema: Twenty Twenty-Five (tema de bloques FSE)
+Plugins activos:
+  - LiteSpeed Cache 7.5.0.1
+  - WPForms Lite 1.9.8.1
+  - WP Mail SMTP 4.6.0
+  - Hostinger Reach
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ LO QUE NECESITO:
+
+¿Podrían ayudarme a editar el template del footer para que muestre solo la primera columna ("Carmen Alvarado" y "Cuidadora Profesional en Tarragona") y oculte las demás secciones?
+
+También me gustaría saber por qué el Editor de Bloques no guarda los cambios.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📸 CAPTURAS DE PANTALLA:
+
+Adjunto capturas de pantalla mostrando:
+1. El footer actual con las 4 columnas
+2. El error al intentar guardar en el Editor de Bloques
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Agradezco mucho su ayuda.
+
+Saludos cordiales,
+Miguel
+

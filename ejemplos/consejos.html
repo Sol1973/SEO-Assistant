@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Consejos para Cuidar Personas Mayores en Casa | Técnica Sociosanitaria Tarragona</title>
+    <meta name="description" content="Consejos profesionales de técnica sociosanitaria para cuidar personas mayores en casa. Guía práctica sobre atención domiciliaria, higiene, medicación y más en Tarragona.">
+    <meta name="keywords" content="consejos cuidar personas mayores, técnico sociosanitario tarragona, atención domiciliaria, cuidado ancianos casa, consejos cuidadores">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://carmenalvarado.es/consejos.html">
+    
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="es" href="https://carmenalvarado.es/consejos.html" />
+    <link rel="alternate" hreflang="ca" href="https://carmenalvarado.es/consells-ca.html" />
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G95HK3Z9CS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G95HK3Z9CS');
+    </script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        .help-hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 3rem 0 2.5rem;
+            text-align: center;
+        }
+        
+        .help-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .help-hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+            opacity: 0.95;
+        }
+        
+        .help-intro {
+            max-width: 900px;
+            margin: 3rem auto;
+            text-align: center;
+            padding: 0 2rem;
+        }
+        
+        .help-intro h2 {
+            color: var(--primary-dark);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .help-intro p {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+        }
+        
+        /* TARJETAS PRINCIPALES */
+        .cards-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .pain-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .pain-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem 2rem 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+            border: 3px solid var(--bg-gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--primary-color);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .pain-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+            border-color: var(--primary-color);
+            border-width: 4px;
+        }
+        
+        .pain-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .pain-card-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .pain-card:hover .pain-card-icon {
+            transform: scale(1.1);
+        }
+        
+        .pain-card-title {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .pain-card-description {
+            color: var(--text-gray);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pain-card-cta {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        
+        .pain-card:hover .pain-card-cta {
+            background: var(--secondary-dark);
+        }
+        
+        /* MODAL */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 9998;
+        }
+        
+        .modal-overlay.active {
+            display: block;
+        }
+        
+        .modal-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 20px;
+            max-width: 900px;
+            width: 95%;
+            max-height: 90vh;
+            overflow-y: auto;
+            z-index: 9999;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+        
+        .modal-container.active {
+            display: block;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(0,0,0,0.1);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+        }
+        
+        .modal-close:hover {
+            background: #e74c3c;
+            color: white;
+            transform: rotate(90deg);
+        }
+        
+        .modal-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 3px solid var(--bg-gray);
+        }
+        
+        .modal-icon {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        
+        .modal-title {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin: 0;
+        }
+        
+        .modal-content h3 {
+            color: var(--primary-color);
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .modal-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        .modal-content ul {
+            margin: 1rem 0 1rem 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .modal-content li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .highlight-box {
+            background: #e3f2fd;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        
+        .success-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .help-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .pain-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .pain-card {
+                padding: 1rem 1.5rem 1.5rem;
+            }
+            
+            .pain-card-icon {
+                font-size: 4rem;
+            }
+            
+            .modal-container {
+                width: 98%;
+                padding: 2rem 1.5rem;
+            }
+            
+            .modal-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header / Navigation -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <h2><a href="index.html" style="color: inherit; text-decoration: none;">Carmen Alvarado</a></h2>
+                    <p class="logo-subtitle">Técnica Sociosanitaria en Tarragona</p>
+                </div>
+                <div class="language-selector" style="position: absolute; top: 50%; right: 150px; transform: translateY(-50%);">
+                    <a href="consejos.html" style="color: #2c5f7c; font-weight: 600; text-decoration: none; padding: 0.5rem 1rem; background: #e3f2fd; border-radius: 5px; margin-right: 0.5rem;">ES</a>
+                    <a href="consells-ca.html" style="color: #2c5f7c; font-weight: 600; text-decoration: none; padding: 0.5rem 1rem; background: #f7fafc; border-radius: 5px;">CA</a>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+                        <li><a href="index.html#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                        <li><a href="ayuda.html" class="nav-link">Te Ayudamos</a></li>
+                        <li><a href="consejos.html" class="nav-link" style="background: var(--primary-light); color: var(--primary-dark);">Consejos</a></li>
+                        <li><a href="contacto.html" class="nav-link btn-nav-cta">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-menu-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Barra de contacto fija superior -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <span class="top-bar-location">📍 Tarragona y Reus</span>
+                    <div class="top-bar-contact">
+                        <a href="tel:+34611230547" class="top-bar-phone">📞 611 230 547</a>
+                        <a href="mailto:calvarado1873@gmail.com" class="top-bar-email">✉️ calvarado1873@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="help-hero">
+        <div class="container">
+            <h1>💡 Consejos Profesionales</h1>
+            <p>Guía práctica de una técnica sociosanitaria con experiencia en Tarragona</p>
+            <p style="font-size: 1rem; opacity: 0.9;">
+                <strong>Consejos basados en mi experiencia profesional</strong> para mejorar el cuidado en casa
+            </p>
+        </div>
+    </section>
+
+    <!-- Introducción -->
+    <div class="help-intro">
+        <h2>¿Qué necesitas saber?</h2>
+        <p>Haz clic en el tema que te interese para ver consejos profesionales detallados:</p>
+    </div>
+
+    <!-- Tarjetas Clicables -->
+    <div class="cards-container">
+        <div class="pain-cards-grid">
+            
+            <!-- Tarjeta 1: Higiene -->
+            <div class="pain-card" onclick="showModal('higiene')">
+                <span class="pain-card-icon">🛏️</span>
+                <h3 class="pain-card-title">Higiene y Cuidado Personal</h3>
+                <p class="pain-card-description">
+                    Baño, higiene bucal, cuidado de la piel y más
+                </p>
+                <span class="pain-card-cta">Ver Consejos →</span>
+            </div>
+
+            <!-- Tarjeta 2: Medicación -->
+            <div class="pain-card" onclick="showModal('medicacion')">
+                <span class="pain-card-icon">💊</span>
+                <h3 class="pain-card-title">Administración de Medicación</h3>
+                <p class="pain-card-description">
+                    Cómo organizar y administrar medicamentos de forma segura
+                </p>
+                <span class="pain-card-cta">Ver Consejos →</span>
+            </div>
+
+            <!-- Tarjeta 3: Alimentación -->
+            <div class="pain-card" onclick="showModal('alimentacion')">
+                <span class="pain-card-icon">🍽️</span>
+                <h3 class="pain-card-title">Alimentación y Nutrición</h3>
+                <p class="pain-card-description">
+                    Dieta equilibrada, hidratación y texturas adaptadas
+                </p>
+                <span class="pain-card-cta">Ver Consejos →</span>
+            </div>
+
+            <!-- Tarjeta 4: Movilidad -->
+            <div class="pain-card" onclick="showModal('movilidad')">
+                <span class="pain-card-icon">🚶</span>
+                <h3 class="pain-card-title">Movilidad y Prevención de Caídas</h3>
+                <p class="pain-card-description">
+                    Cómo prevenir caídas y mantener la movilidad
+                </p>
+                <span class="pain-card-cta">Ver Consejos →</span>
+            </div>
+
+            <!-- Tarjeta 5: Estimulación -->
+            <div class="pain-card" onclick="showModal('estimulacion')">
+                <span class="pain-card-icon">🧠</span>
+                <h3 class="pain-card-title">Estimulación Cognitiva</h3>
+                <p class="pain-card-description">
+                    Actividades para mantener la mente activa
+                </p>
+                <span class="pain-card-cta">Ver Consejos →</span>
+            </div>
+
+            <!-- Tarjeta 6: Emocional -->
+            <div class="pain-card" onclick="showModal('emocional')">
+                <span class="pain-card-icon">❤️</span>
+                <h3 class="pain-card-title">Cuidado Emocional</h3>
+                <p class="pain-card-description">
+                    Bienestar emocional y señales de alerta
+                </p>
+                <span class="pain-card-cta">Ver Consejos →</span>
+            </div>
+
+            <!-- Tarjeta 7: Ayuda Profesional -->
+            <div class="pain-card" onclick="showModal('ayuda')">
+                <span class="pain-card-icon">🆘</span>
+                <h3 class="pain-card-title">Cuándo Buscar Ayuda Profesional</h3>
+                <p class="pain-card-description">
+                    Señales de que necesitas apoyo de una técnica sociosanitaria
+                </p>
+                <span class="pain-card-cta">Ver Consejos →</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Overlay del Modal -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+
+    <!-- MODAL: HIGIENE -->
+    <div class="modal-container" id="modal-higiene">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-header">
+            <span class="modal-icon">🛏️</span>
+            <h2 class="modal-title">Higiene y Cuidado Personal</h2>
+        </div>
+        <div class="modal-content">
+            <p><strong>La higiene diaria es fundamental para la salud y dignidad de las personas mayores.</strong></p>
+            
+            <h3>🚿 Baño o Ducha</h3>
+            <ul>
+                <li><strong>Frecuencia:</strong> Mínimo 2-3 veces por semana (ducha completa)</li>
+                <li><strong>Seguridad:</strong> Usa alfombrillas antideslizantes y barras de apoyo</li>
+                <li><strong>Temperatura:</strong> Agua tibia, nunca muy caliente</li>
+                <li><strong>Supervisión:</strong> Acompaña si hay riesgo de caída</li>
+            </ul>
+            
+            <h3>🦷 Higiene Bucal</h3>
+            <ul>
+                <li>Cepillado después de cada comida</li>
+                <li>Si usa dentadura postiza, límpiala diariamente</li>
+                <li>Revisión dental cada 6 meses</li>
+            </ul>
+            
+            <h3>👕 Cambio de Ropa</h3>
+            <ul>
+                <li>Ropa interior: Diariamente</li>
+                <li>Ropa exterior: Cada 2-3 días o cuando se ensucie</li>
+                <li>Usa tejidos suaves y cómodos (algodón)</li>
+            </ul>
+            
+            <h3>🧴 Cuidado de la Piel</h3>
+            <ul>
+                <li>Hidrata después del baño</li>
+                <li>Revisa diariamente zonas de presión (talones, codos, glúteos)</li>
+                <li>Atención especial si usa pañal (cambio frecuente)</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>💡 Consejo profesional de técnica sociosanitaria:</strong><br>
+                Si la persona tiene movilidad reducida, usa toallitas húmedas para higiene parcial entre baños completos. Es más cómodo y seguro.
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: MEDICACIÓN -->
+    <div class="modal-container" id="modal-medicacion">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-header">
+            <span class="modal-icon">💊</span>
+            <h2 class="modal-title">Administración de Medicación</h2>
+        </div>
+        <div class="modal-content">
+            <p><strong>La correcta administración de medicamentos es crucial para la salud.</strong></p>
+            
+            <h3>📦 Organizador Semanal</h3>
+            <ul>
+                <li>Usa un pastillero con compartimentos para cada día y hora</li>
+                <li>Prepara la medicación semanal cada domingo</li>
+                <li>Etiqueta claramente cada compartimento</li>
+            </ul>
+            
+            <h3>⏰ Horarios Fijos</h3>
+            <ul>
+                <li>Establece alarmas en el móvil para cada toma</li>
+                <li>Asocia la medicación con rutinas (desayuno, comida, cena)</li>
+                <li>Usa un registro para marcar cada toma</li>
+            </ul>
+            
+            <h3>📝 Lista Actualizada</h3>
+            <ul>
+                <li>Ten una lista visible con todos los medicamentos</li>
+                <li>Incluye: nombre, dosis, horario, para qué es</li>
+                <li>Actualiza cuando el médico cambie algo</li>
+            </ul>
+            
+            <h3>👨‍⚕️ Revisión Médica</h3>
+            <ul>
+                <li>Revisa la medicación con el médico cada 3-6 meses</li>
+                <li>Pregunta si se puede simplificar</li>
+                <li>Informa sobre efectos secundarios</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>⚠️ MUY IMPORTANTE:</strong><br>
+                Nunca cambies dosis o suspendas medicación sin consultar al médico. Guarda los medicamentos en un lugar fresco, seco y fuera del alcance de niños.
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: ALIMENTACIÓN -->
+    <div class="modal-container" id="modal-alimentacion">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-header">
+            <span class="modal-icon">🍽️</span>
+            <h2 class="modal-title">Alimentación y Nutrición</h2>
+        </div>
+        <div class="modal-content">
+            <p><strong>Una buena nutrición es clave para mantener la salud y energía.</strong></p>
+            
+            <h3>🍴 5 Comidas al Día</h3>
+            <ul>
+                <li><strong>Desayuno:</strong> 8:00-9:00 (lácteo, pan, fruta)</li>
+                <li><strong>Media mañana:</strong> 11:00 (fruta o yogur)</li>
+                <li><strong>Comida:</strong> 13:00-14:00 (plato principal completo)</li>
+                <li><strong>Merienda:</strong> 17:00 (lácteo o fruta)</li>
+                <li><strong>Cena:</strong> 20:00-21:00 (ligera, fácil de digerir)</li>
+            </ul>
+            
+            <h3>💧 Hidratación</h3>
+            <ul>
+                <li>Mínimo 1.5-2 litros de agua al día</li>
+                <li>Ofrece agua regularmente (cada 2 horas)</li>
+                <li>Infusiones, caldos también cuentan</li>
+                <li>Evita alcohol y bebidas azucaradas</li>
+            </ul>
+            
+            <h3>🥄 Texturas Adaptadas</h3>
+            <ul>
+                <li>Si hay problemas de deglución, tritura o adapta la textura</li>
+                <li>Espesa líquidos si es necesario (consulta con médico)</li>
+                <li>Corta alimentos en trozos pequeños</li>
+            </ul>
+            
+            <h3>🥗 Dieta Equilibrada</h3>
+            <ul>
+                <li><strong>Frutas y verduras:</strong> 5 raciones al día</li>
+                <li><strong>Proteínas:</strong> Carne, pescado, huevos, legumbres</li>
+                <li><strong>Lácteos:</strong> 2-3 raciones al día (calcio)</li>
+                <li><strong>Reducir:</strong> Sal, azúcar, grasas saturadas</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>⚠️ Señal de alerta:</strong><br>
+                Si la persona pierde peso sin razón aparente (más de 2-3 kg en un mes), consulta al médico. Puede ser señal de problemas de salud o depresión.
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: MOVILIDAD -->
+    <div class="modal-container" id="modal-movilidad">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-header">
+            <span class="modal-icon">🚶</span>
+            <h2 class="modal-title">Movilidad y Prevención de Caídas</h2>
+        </div>
+        <div class="modal-content">
+            <p><strong>Las caídas son la principal causa de lesiones en personas mayores. La prevención es clave.</strong></p>
+            
+            <h3>🏠 Elimina Obstáculos</h3>
+            <ul>
+                <li>Quita alfombras sueltas o fíjalas bien</li>
+                <li>Retira cables sueltos de pasillos</li>
+                <li>Despeja pasillos de muebles u objetos</li>
+                <li>Organiza para que todo esté al alcance</li>
+            </ul>
+            
+            <h3>💡 Buena Iluminación</h3>
+            <ul>
+                <li>Luces nocturnas en pasillos y baño</li>
+                <li>Interruptores accesibles</li>
+                <li>Evita zonas oscuras</li>
+                <li>Cortinas que permitan luz natural</li>
+            </ul>
+            
+            <h3>👟 Calzado Adecuado</h3>
+            <ul>
+                <li>Zapatillas cerradas con suela antideslizante</li>
+                <li>Evita chanclas o calcetines solos</li>
+                <li>Que ajusten bien (ni apretadas ni sueltas)</li>
+            </ul>
+            
+            <h3>🦯 Ayudas Técnicas</h3>
+            <ul>
+                <li>Bastón o andador si es necesario</li>
+                <li>Barras de apoyo en baño y pasillos</li>
+                <li>Asiento elevado para el inodoro</li>
+                <li>Silla de ducha si hay problemas de equilibrio</li>
+            </ul>
+            
+            <h3>🚶‍♀️ Ejercicio Suave</h3>
+            <ul>
+                <li>Paseos cortos diarios (10-15 minutos)</li>
+                <li>Ejercicios de equilibrio sentado</li>
+                <li>Estiramientos suaves</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>⚠️ Si se cae:</strong><br>
+                NO la levantes inmediatamente. Evalúa si hay dolor, deformidad o imposibilidad de mover alguna parte. Si hay duda, llama al 112. Si está consciente y sin dolor, ayúdala a levantarse despacio.
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: ESTIMULACIÓN -->
+    <div class="modal-container" id="modal-estimulacion">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-header">
+            <span class="modal-icon">🧠</span>
+            <h2 class="modal-title">Estimulación Cognitiva y Social</h2>
+        </div>
+        <div class="modal-content">
+            <p><strong>Mantener la mente activa es tan importante como el cuidado físico.</strong></p>
+            
+            <h3>💬 Conversación Diaria</h3>
+            <ul>
+                <li>Habla sobre noticias del día</li>
+                <li>Pregunta por recuerdos y anécdotas</li>
+                <li>Comenta sobre la familia</li>
+                <li>Escucha activamente</li>
+            </ul>
+            
+            <h3>🎲 Juegos Mentales</h3>
+            <ul>
+                <li>Crucigramas, sopas de letras</li>
+                <li>Sudoku adaptado</li>
+                <li>Juegos de cartas (brisca, cinquillo)</li>
+                <li>Puzzles simples</li>
+            </ul>
+            
+            <h3>📚 Lectura</h3>
+            <ul>
+                <li>Libros de su interés</li>
+                <li>Periódicos locales</li>
+                <li>Revistas con imágenes</li>
+                <li>Lee en voz alta si tiene problemas de visión</li>
+            </ul>
+            
+            <h3>👥 Contacto Social</h3>
+            <ul>
+                <li>Visitas familiares regulares</li>
+                <li>Videollamadas con familiares lejanos</li>
+                <li>Salidas cuando sea posible (parque, café)</li>
+                <li>Mantén contacto con amistades</li>
+            </ul>
+            
+            <h3>📅 Rutinas</h3>
+            <ul>
+                <li>Horarios regulares para comidas y actividades</li>
+                <li>Rutina matutina y nocturna</li>
+                <li>Da estructura y seguridad</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>💡 Consejo profesional:</strong><br>
+                Adapta las actividades al nivel cognitivo de la persona. Si tiene demencia, usa actividades más simples. No frustres con tareas demasiado difíciles.
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: EMOCIONAL -->
+    <div class="modal-container" id="modal-emocional">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-header">
+            <span class="modal-icon">❤️</span>
+            <h2 class="modal-title">Cuidado Emocional</h2>
+        </div>
+        <div class="modal-content">
+            <p><strong>El bienestar emocional es fundamental para la calidad de vida.</strong></p>
+            
+            <h3>👂 Escucha Activa</h3>
+            <ul>
+                <li>Dedica tiempo a escuchar sus preocupaciones</li>
+                <li>No minimices sus sentimientos</li>
+                <li>Valida sus emociones ("entiendo que te sientas así")</li>
+                <li>Pregunta cómo se siente regularmente</li>
+            </ul>
+            
+            <h3>🤝 Respeto y Dignidad</h3>
+            <ul>
+                <li>Trata a la persona con el mismo respeto que siempre</li>
+                <li>No hables de ella como si no estuviera presente</li>
+                <li>Respeta su intimidad (baño, cambio de ropa)</li>
+                <li>Usa un tono de voz apropiado (no infantil)</li>
+            </ul>
+            
+            <h3>🎯 Autonomía</h3>
+            <ul>
+                <li>Permite que tome decisiones en lo que pueda</li>
+                <li>Pregunta sus preferencias (ropa, comida, actividades)</li>
+                <li>No hagas todo por ella si puede hacerlo sola</li>
+                <li>Fomenta la independencia dentro de lo posible</li>
+            </ul>
+            
+            <h3>⏰ Paciencia</h3>
+            <ul>
+                <li>Algunas tareas pueden tomar más tiempo</li>
+                <li>No apresures ni presiones</li>
+                <li>Respira hondo si te frustras</li>
+                <li>Recuerda: no es su culpa</li>
+            </ul>
+            
+            <h3>😢 Señales de Depresión</h3>
+            <ul>
+                <li>Tristeza persistente (más de 2 semanas)</li>
+                <li>Pérdida de interés en actividades que antes disfrutaba</li>
+                <li>Cambios de apetito o sueño</li>
+                <li>Aislamiento social</li>
+                <li>Comentarios sobre "ser una carga"</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>⚠️ Importante:</strong><br>
+                Si notas cambios significativos en el estado de ánimo, consulta con el médico. La depresión en personas mayores es común y tratable.
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: AYUDA PROFESIONAL -->
+    <div class="modal-container" id="modal-ayuda">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-header">
+            <span class="modal-icon">🆘</span>
+            <h2 class="modal-title">Cuándo Buscar Ayuda Profesional</h2>
+        </div>
+        <div class="modal-content">
+            <p><strong>No tienes que hacerlo todo solo/a. Busca ayuda profesional si:</strong></p>
+            
+            <h3>😓 Te Sientes Agotado/a</h3>
+            <ul>
+                <li>Física o emocionalmente exhausto/a</li>
+                <li>No duermes bien por preocupación</li>
+                <li>Tu salud está empeorando</li>
+                <li>Sientes resentimiento o frustración constante</li>
+            </ul>
+            
+            <h3>🎓 Requiere Conocimientos Técnicos</h3>
+            <ul>
+                <li>Administración de medicación compleja</li>
+                <li>Movilización segura (riesgo de lesión)</li>
+                <li>Cuidado de heridas o sondas</li>
+                <li>Control de signos vitales</li>
+            </ul>
+            
+            <h3>⏰ Necesitas Tiempo</h3>
+            <ul>
+                <li>Para trabajar</li>
+                <li>Para atender tu propia vida y familia</li>
+                <li>Para descansar y recuperarte</li>
+                <li>Para hacer trámites o citas médicas</li>
+            </ul>
+            
+            <h3>🕐 Atención 24 Horas</h3>
+            <ul>
+                <li>La persona necesita supervisión constante</li>
+                <li>Hay riesgo de caídas o desorientación</li>
+                <li>Post-hospitalización que requiere cuidados intensivos</li>
+            </ul>
+            
+            <h3>😤 Problemas de Comportamiento</h3>
+            <ul>
+                <li>Agresividad o agitación</li>
+                <li>Deambulación nocturna</li>
+                <li>Rechazo a cuidados</li>
+                <li>Situaciones que no sabes manejar</li>
+            </ul>
+            
+            <div class="success-box">
+                <strong>✅ Cómo puede ayudarte una técnica sociosanitaria profesional:</strong>
+                <ul style="margin-top: 1rem;">
+                    <li><strong>Higiene especializada:</strong> Baño, aseo, cuidado de la piel</li>
+                    <li><strong>Medicación segura:</strong> Administración correcta y control</li>
+                    <li><strong>Movilización:</strong> Técnicas seguras para evitar lesiones</li>
+                    <li><strong>Compañía:</strong> Conversación y estimulación cognitiva</li>
+                    <li><strong>Respiro:</strong> Tiempo para ti mientras tu familiar está bien cuidado</li>
+                    <li><strong>Comunicación:</strong> Informes a la familia sobre evolución</li>
+                </ul>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #2c5f7c 0%, #4a8fb5 100%); color: white; padding: 2rem; border-radius: 12px; text-align: center; margin-top: 2rem;">
+                <h3 style="color: white; margin-bottom: 1rem;">¿Necesitas Ayuda en Tarragona?</h3>
+                <p style="margin-bottom: 1.5rem;">
+                    Como técnica sociosanitaria titulada, puedo ayudarte con el cuidado profesional de tu familiar.
+                </p>
+                <a href="contacto.html" style="display: inline-block; background: white; color: #2c5f7c; padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                    Contacta Ahora
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.95rem;">
+                    📞 611 230 547 | ✉️ calvarado1873@gmail.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container" style="text-align: center; padding: 2rem;">
+            <p><strong>Carmen Alvarado</strong></p>
+            <p>Cuidadora Profesional y Técnica Sociosanitaria en Tarragona</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">© 2025 Carmen Alvarado. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        function showModal(modalId) {
+            document.getElementById('modalOverlay').classList.add('active');
+            document.getElementById('modal-' + modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.querySelectorAll('.modal-container').forEach(modal => {
+                modal.classList.remove('active');
+            });
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Cerrar modal con ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- ==========================================
+         PÁGINAS EN ESPAÑOL
+         ========================================== -->
+    
+    <!-- Página Principal ES -->
+    <url>
+        <loc>https://carmenalvarado.es/</loc>
+        <lastmod>2025-10-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://carmenalvarado.es/index-ca.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://carmenalvarado.es/"/>
+    </url>
+    
+    <!-- Contacto ES -->
+    <url>
+        <loc>https://carmenalvarado.es/contacto.html</loc>
+        <lastmod>2025-10-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://carmenalvarado.es/contacte-ca.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://carmenalvarado.es/contacto.html"/>
+    </url>
+    
+    <!-- Te Ayudamos ES -->
+    <url>
+        <loc>https://carmenalvarado.es/ayuda.html</loc>
+        <lastmod>2025-10-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://carmenalvarado.es/ajuda-ca.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://carmenalvarado.es/ayuda.html"/>
+    </url>
+    
+    <!-- Consejos ES -->
+    <url>
+        <loc>https://carmenalvarado.es/consejos.html</loc>
+        <lastmod>2025-10-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://carmenalvarado.es/consells-ca.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://carmenalvarado.es/consejos.html"/>
+    </url>
+    
+    <!-- Gracias ES -->
+    <url>
+        <loc>https://carmenalvarado.es/gracias.html</loc>
+        <lastmod>2025-10-13</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://carmenalvarado.es/gracies-ca.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://carmenalvarado.es/gracias.html"/>
+    </url>
+    
+    <!-- ==========================================
+         PÁGINAS EN CATALÁN
+         ========================================== -->
+    
+    <!-- Página Principal CA -->
+    <url>
+        <loc>https://carmenalvarado.es/index-ca.html</loc>
+        <lastmod>2025-10-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://carmenalvarado.es/"/>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://carmenalvarado.es/index-ca.html"/>
+    </url>
+    
+    <!-- Contacte CA -->
+    <url>
+        <loc>https://carmenalvarado.es/contacte-ca.html</loc>
+        <lastmod>2025-10-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://carmenalvarado.es/contacto.html"/>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://carmenalvarado.es/contacte-ca.html"/>
+    </url>
+    
+    <!-- T'Ajudem CA -->
+    <url>
+        <loc>https://carmenalvarado.es/ajuda-ca.html</loc>
+        <lastmod>2025-10-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://carmenalvarado.es/ayuda.html"/>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://carmenalvarado.es/ajuda-ca.html"/>
+    </url>
+    
+    <!-- Consells CA -->
+    <url>
+        <loc>https://carmenalvarado.es/consells-ca.html</loc>
+        <lastmod>2025-10-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://carmenalvarado.es/consejos.html"/>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://carmenalvarado.es/consells-ca.html"/>
+    </url>
+    
+    <!-- Gràcies CA -->
+    <url>
+        <loc>https://carmenalvarado.es/gracies-ca.html</loc>
+        <lastmod>2025-10-13</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://carmenalvarado.es/gracias.html"/>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://carmenalvarado.es/gracies-ca.html"/>
+    </url>
+    
+</urlset>

@@ -1,0 +1,223 @@
+================================================================================
+ANÁLISIS DE COMPETENCIA - CARMEN ALVARADO
+Fecha: 2025-10-12 19:02:59
+================================================================================
+
+COMPETIDORES NACIONALES
+--------------------------------------------------------------------------------
+
+Cuideo (cuideo.es)
+  Tipo: Plataforma nacional
+  Fortalezas: Brand reconocido, Cobertura nacional, App móvil
+  Debilidades: Impersonal, Comisiones altas, Menos local
+  Keywords: cuideo tarragona, plataforma cuidadores
+
+Cuidum (cuidum.com)
+  Tipo: Agregador
+  Fortalezas: SEO fuerte, Contenido extenso, Blog activo
+  Debilidades: Intermediario, Precios variables
+  Keywords: cuidum, contratar cuidadora online
+
+Aiudo (aiudo.es)
+  Tipo: Marketplace
+  Fortalezas: Comparador, Reseñas
+  Debilidades: Comisión, No servicio directo
+  Keywords: aiudo, comparar cuidadoras
+
+
+================================================================================
+ESTRATEGIA DE DIFERENCIACIÓN
+================================================================================
+
+Posicionamiento: Profesional sanitaria con formación dual que ofrece cuidado personalizado, directo y de confianza en Tarragona, sin intermediarios.
+
+Propuesta de Valor: Cuidado profesional con corazón: la experiencia de una enfermera con la calidez del trato familiar.
+
+
+VENTAJAS COMPETITIVAS:
+--------------------------------------------------------------------------------
+
+1. Trato directo sin intermediarios
+   → Beneficio: Sin comisiones, precio transparente
+   → Keyword: cuidadora particular tarragona
+   → Mensaje: Trato directo, sin comisiones de plataformas
+
+2. Formación dual: Enfermera + Sociosanitaria
+   → Beneficio: Conocimientos médicos reales, no solo cuidados básicos
+   → Keyword: cuidadora enfermera tarragona
+   → Mensaje: Formación profesional sanitaria completa
+
+3. Bilingüe Español-Catalán (B2)
+   → Beneficio: Comunicación fluida con mayores catalanoparlantes
+   → Keyword: cuidadora catalan tarragona
+   → Mensaje: Atención en catalán y castellano
+
+4. Experiencia internacional
+   → Beneficio: Adaptabilidad, diferentes enfoques de cuidado
+   → Keyword: cuidadora profesional experiencia
+   → Mensaje: 20+ años de experiencia sanitaria
+
+5. Disponibilidad inmediata
+   → Beneficio: Sin esperas, respuesta rápida a urgencias
+   → Keyword: cuidadora urgente tarragona
+   → Mensaje: Disponibilidad inmediata
+
+6. Perfil personal, no agencia
+   → Beneficio: Misma persona siempre, vínculo emocional
+   → Keyword: cuidadora fija tarragona
+   → Mensaje: Atención personalizada con la misma profesional
+
+7. Zona específica Tarragona/Reus
+   → Beneficio: Conocimiento local, cercanía
+   → Keyword: cuidadora local tarragona
+   → Mensaje: Profesional de Tarragona para Tarragona
+
+
+================================================================================
+OPORTUNIDADES DE CONTENIDO
+================================================================================
+
+1. Guías específicas para Tarragona
+   Oportunidad: Recursos locales (centros salud, farmacias, servicios municipales)
+   Contenido: Guía completa de recursos para personas dependientes en Tarragona
+   Keyword: recursos personas mayores tarragona
+
+2. Transparencia en precios
+   Oportunidad: Competencia no muestra precios claros
+   Contenido: Tabla de tarifas detallada con ejemplos reales
+   Keyword: precio cuidadora tarragona hora
+
+3. Casos de estudio reales
+   Oportunidad: Historias de éxito anónimas
+   Contenido: Testimonios detallados con antes/después
+   Keyword: experiencias cuidadora domicilio
+
+4. Contenido en catalán
+   Oportunidad: Poco contenido SEO en catalán en el sector
+   Contenido: Versión completa del sitio en catalán
+   Keyword: cuidadora persones grans tarragona
+
+5. Video personal
+   Oportunidad: Competencia usa fotos stock, no videos reales
+   Contenido: Video de presentación de Carmen + tours virtuales
+   Keyword: conocer cuidadora antes contratar
+
+6. Checklist descargables
+   Oportunidad: Recursos prácticos para familias
+   Contenido: PDFs: Checklist elección cuidadora, preparar hogar, etc.
+   Keyword: como preparar casa cuidadora
+
+
+================================================================================
+TEMPLATE PARA ANÁLISIS MANUAL DE SERPs
+================================================================================
+
+═══════════════════════════════════════════════════════════════
+ANÁLISIS SERP - PLANTILLA
+═══════════════════════════════════════════════════════════════
+
+KEYWORD ANALIZADA: _________________________________________
+FECHA: ____________________
+UBICACIÓN: Tarragona, España
+DISPOSITIVO: [ ] Desktop  [ ] Mobile
+
+───────────────────────────────────────────────────────────────
+RESULTADOS ORGÁNICOS (Top 10)
+───────────────────────────────────────────────────────────────
+
+POSICIÓN 1:
+  URL: ___________________________________________________
+  Title: ___________________________________________________
+  Meta Description: _______________________________________
+  Tipo de sitio: [ ] Directorio  [ ] Web propia  [ ] Blog  [ ] Otro: ____
+  Autoridad estimada: [ ] Baja  [ ] Media  [ ] Alta
+  Extensión contenido: ~_____ palabras
+  Usa keyword en URL: [ ] Sí  [ ] No
+  Tiene schema markup: [ ] Sí  [ ] No  [ ] No sé
+  Velocidad carga: [ ] Rápida  [ ] Media  [ ] Lenta
+  Diseño: [ ] Moderno  [ ] Aceptable  [ ] Anticuado
+  
+  NOTAS: ___________________________________________________
+
+[Repetir para posiciones 2-10]
+
+───────────────────────────────────────────────────────────────
+FEATURED SNIPPET / POSITION ZERO
+───────────────────────────────────────────────────────────────
+[ ] No hay featured snippet
+[ ] Párrafo  [ ] Lista  [ ] Tabla  [ ] Video
+
+Contenido: _______________________________________________
+URL que lo ocupa: ________________________________________
+¿Podemos competir?: [ ] Sí  [ ] No
+
+───────────────────────────────────────────────────────────────
+LOCAL PACK (Google Maps - Top 3)
+───────────────────────────────────────────────────────────────
+
+1. ________________________  (___★ - ___ reseñas)
+2. ________________________  (___★ - ___ reseñas)
+3. ________________________  (___★ - ___ reseñas)
+
+¿Aparece Carmen?: [ ] Sí  [ ] No  [ ] No tiene Google My Business
+
+───────────────────────────────────────────────────────────────
+ANUNCIOS (Google Ads)
+───────────────────────────────────────────────────────────────
+
+Número de anuncios top: ____
+Número de anuncios bottom: ____
+
+Anunciante destacado: ____________________________________
+Mensaje principal: _______________________________________
+Call-to-action: __________________________________________
+
+Estimación inversión: [ ] Baja  [ ] Media  [ ] Alta
+
+───────────────────────────────────────────────────────────────
+"LA GENTE TAMBIÉN PREGUNTA"
+───────────────────────────────────────────────────────────────
+
+1. ___________________________________________________
+2. ___________________________________________________
+3. ___________________________________________________
+4. ___________________________________________________
+
+Oportunidad contenido: [ ] Sí  [ ] No
+
+───────────────────────────────────────────────────────────────
+BÚSQUEDAS RELACIONADAS (Pie de página)
+───────────────────────────────────────────────────────────────
+
+1. ___________________________  5. __________________________
+2. ___________________________  6. __________________________
+3. ___________________________  7. __________________________
+4. ___________________________  8. __________________________
+
+───────────────────────────────────────────────────────────────
+ANÁLISIS Y CONCLUSIONES
+───────────────────────────────────────────────────────────────
+
+Dificultad de competir: [ ] Baja  [ ] Media  [ ] Alta
+
+Tipo de contenido que rankea mejor:
+[ ] Directorios/Listados
+[ ] Webs locales individuales
+[ ] Artículos informativos
+[ ] Páginas comerciales directas
+[ ] Otro: _________________________________________________
+
+Extensión promedio contenido top 3: ~_____ palabras
+
+Factores diferenciadores en top 3:
+_____________________________________________________________
+_____________________________________________________________
+
+ESTRATEGIA RECOMENDADA:
+_____________________________________________________________
+_____________________________________________________________
+_____________________________________________________________
+
+PRIORIDAD ESTA KEYWORD: [ ] Alta  [ ] Media  [ ] Baja
+
+═══════════════════════════════════════════════════════════════

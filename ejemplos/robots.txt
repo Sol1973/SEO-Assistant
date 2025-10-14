@@ -1,0 +1,31 @@
+# robots.txt para Carmen Alvarado - Cuidadora Profesional Tarragona
+# Fecha: 12 de octubre de 2025
+
+User-agent: *
+Allow: /
+
+# Bloquear archivos de sistema
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+
+# Permitir CSS y JS para que Google los vea
+Allow: /wp-content/uploads/
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Bloquear URLs con parámetros
+Disallow: /*?
+Disallow: /*?*
+
+# Bloquear páginas de búsqueda
+Disallow: /search
+Disallow: /?s=
+
+# Sitemap
+Sitemap: https://carmenalvarado.es/sitemap.xml
+Sitemap: https://carmenalvarado.es/sitemap_index.xml
+

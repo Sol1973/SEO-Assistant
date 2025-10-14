@@ -1,0 +1,41 @@
+🚨 PROBLEMA URGENTE: Footer de WordPress no se puede modificar
+
+SITIO: https://carmenalvarado.es
+TEMA: Twenty Twenty-Five (WordPress 6.8.3)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROBLEMA:
+El footer muestra 4 columnas: "Carmen Alvarado", "Acerca de", "Privacidad" y "Social".
+Necesitamos ocultar las últimas 3 columnas y dejar solo "Carmen Alvarado" centrada.
+
+INTENTOS FALLIDOS:
+✗ CSS en style.css del tema
+✗ CSS con !important
+✗ CSS inline en functions.php
+✗ Purgar caché de LiteSpeed múltiples veces
+✗ CSS en WordPress Customizer (no guarda cambios)
+✗ Crear footer.php personalizado
+
+PROBLEMA ADICIONAL:
+El editor de bloques no guarda cambios (error: "Revisar 1 cambio").
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SOLUCIÓN REQUERIDA:
+1. Editar el template del footer desde el servidor
+2. Eliminar las columnas "Acerca de", "Privacidad" y "Social"
+3. Dejar solo "Carmen Alvarado" y "Cuidadora Profesional en Tarragona"
+
+ACCESO SSH:
+ssh -i ~/.ssh/hostinger_key -p 65002 u375945539@82.29.87.172
+cd domains/carmenalvarado.es/public_html
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PREGUNTA PARA SOPORTE:
+¿Cómo editar el template del footer en un tema FSE (Full Site Editing) 
+cuando el editor de bloques no guarda cambios?
+
+¿Hay algún comando WP-CLI para editar templates de bloques directamente?
+

@@ -1,0 +1,29 @@
+🚨 PROBLEMA URGENTE - carmenalvarado.es
+
+SITUACIÓN:
+- Los formularios de contacto NO envían emails
+- Múltiples configuraciones intentadas sin éxito
+- Afecta negocio (clientes no pueden contactar)
+
+CONFIGURACIONES INTENTADAS:
+✅ WP Mail SMTP con smtp.hostinger.com
+✅ FormSubmit.co (requiere verificación externa)
+✅ Email del dominio info@carmenalvarado.es
+
+PROBLEMA:
+- WordPress no puede enviar emails
+- No hay errores específicos
+- Configuración aparentemente correcta
+
+SOLUCIÓN SOLICITADA:
+- Que WordPress pueda enviar emails
+- Usar info@carmenalvarado.es
+- Sin plugins externos
+
+CONTACTO:
+- Cliente: Carmen Alvarado
+- Email: calvarado1873@gmail.com
+- Teléfono: 611 230 547
+- Dominio: carmenalvarado.es
+
+URGENCIA: Alta (afecta negocio)

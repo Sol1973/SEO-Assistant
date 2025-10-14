@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>T'Ajudem: Guia per Cuidar Persones Grans | Tècnica Sociosanitària Tarragona</title>
+    <meta name="description" content="Preocupat/da pel teu familiar gran? Guia professional de tècnica sociosanitària a Tarragona. Consells pràctics sobre cura de persones grans i dependents.">
+    <meta name="keywords" content="cuidar persones grans, tècnic sociosanitari tarragona, consells cuidadors, atenció domiciliària, cura gent gran tarragona, ajuda familiar gran">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://carmenalvarado.es/ajuda-ca.html">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G95HK3Z9CS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G95HK3Z9CS');
+    </script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        .help-hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 3rem 0 2.5rem;
+            text-align: center;
+        }
+        
+        .help-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .help-hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+            opacity: 0.95;
+        }
+        
+        .help-intro {
+            max-width: 900px;
+            margin: 3rem auto;
+            text-align: center;
+            padding: 0 2rem;
+        }
+        
+        .help-intro h2 {
+            color: var(--primary-dark);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .help-intro p {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+        }
+        
+        /* TARJETAS PRINCIPALES */
+        .cards-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .pain-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .pain-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem 2rem 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+            border: 3px solid var(--bg-gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--primary-color);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .pain-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+            border-color: var(--primary-color);
+            border-width: 4px;
+        }
+        
+        .pain-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .pain-card-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .pain-card:hover .pain-card-icon {
+            transform: scale(1.1);
+        }
+        
+        .pain-card-title {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .pain-card-description {
+            color: var(--text-gray);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pain-card-cta {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        
+        .pain-card:hover .pain-card-cta {
+            background: var(--secondary-dark);
+        }
+        
+        /* MODAL / VENTANA EMERGENTE */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 9998;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            display: block;
+        }
+        
+        .modal-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 20px;
+            max-width: 1000px;
+            width: 95%;
+            max-height: 90vh;
+            overflow-y: auto;
+            z-index: 9999;
+            padding: 3rem 2.5rem;
+            animation: slideUp 0.4s ease;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+        
+        .modal-container.active {
+            display: block;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(0,0,0,0.1);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            color: var(--text-dark);
+        }
+        
+        .modal-close:hover {
+            background: var(--error);
+            color: white;
+            transform: rotate(90deg);
+        }
+        
+        .modal-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 3px solid var(--bg-gray);
+        }
+        
+        .modal-icon {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        
+        .modal-title {
+            font-size: 2.25rem;
+            color: var(--primary-dark);
+            margin: 0;
+        }
+        
+        .modal-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+        
+        /* SUB-TARJETAS (Nivel 2) */
+        .sub-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .sub-card {
+            background: var(--bg-light);
+            border: 2px solid var(--bg-gray);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .sub-card:hover {
+            background: white;
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .sub-card-icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+        
+        .sub-card-title {
+            font-size: 1.125rem;
+            color: var(--primary-dark);
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .sub-card-hint {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            margin-top: 0.5rem;
+        }
+        
+        /* CONTENIDO DETALLADO (Nivel 3) */
+        .detail-view {
+            display: none;
+        }
+        
+        .detail-view.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        .sub-menu {
+            display: block;
+        }
+        
+        .sub-menu.hidden {
+            display: none;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-light);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+        
+        .back-button:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .detail-content h3 {
+            color: var(--primary-color);
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        
+        .detail-content ul {
+            margin: 1rem 0 1rem 1.5rem;
+        }
+        
+        .detail-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .detail-cta {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .detail-cta h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .detail-cta p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .checklist-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            border: 2px solid var(--primary-color);
+        }
+        
+        .checklist-box h4 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .checklist-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .checklist-box li {
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            padding-left: 2.5rem;
+            position: relative;
+        }
+        
+        .checklist-box li::before {
+            content: '☐';
+            position: absolute;
+            left: 0.75rem;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+        
+        .highlight-box {
+            background: #FFF3E0;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--border-radius);
+        }
+        
+        .highlight-box strong {
+            color: var(--secondary-dark);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translate(-50%, -40%);
+            }
+            to { 
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .help-hero {
+                padding: 2rem 0 2rem;
+            }
+            
+            .help-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .help-intro {
+                margin: 2rem auto;
+            }
+            
+            .cards-container {
+                padding: 1rem;
+            }
+            
+            .pain-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .pain-card {
+                padding: 1rem 1.5rem 1.5rem;
+            }
+            
+            .pain-card-icon {
+                font-size: 4rem;
+                margin-bottom: 0.75rem;
+            }
+            
+            .modal-container {
+                width: 98%;
+                max-height: 95vh;
+                padding: 2rem 1.5rem;
+            }
+            
+            .sub-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .modal-title {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header / Navigation -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <h2><a href="index-ca.html" style="color: inherit; text-decoration: none;">Carmen Alvarado</a></h2>
+                    <p class="logo-subtitle">Cuidadora Profesional a Tarragona</p>
+                </div>
+                <div class="language-selector" style="position: absolute; top: 50%; right: 150px; transform: translateY(-50%);">
+                    <a href="ayuda.html" style="color: #2c5f7c; font-weight: 600; text-decoration: none; padding: 0.5rem 1rem; background: #f7fafc; border-radius: 5px; margin-right: 0.5rem;">ES</a>
+                    <a href="ajuda-ca.html" style="color: #2c5f7c; font-weight: 600; text-decoration: none; padding: 0.5rem 1rem; background: #e3f2fd; border-radius: 5px;">CA</a>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="index-ca.html" class="nav-link">Inici</a></li>
+                        <li><a href="index-ca.html#servicios" class="nav-link">Serveis</a></li>
+                        <li><a href="index-ca.html#sobre-mi" class="nav-link">Sobre Mi</a></li>
+                        <li><a href="ajuda-ca.html" class="nav-link" style="background: var(--primary-light); color: var(--primary-dark);">T'Ajudem</a></li>
+                        <li><a href="consells-ca.html" class="nav-link">Consells</a></li>
+                        <li><a href="contacte-ca.html" class="nav-link btn-nav-cta">Contacte</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-menu-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Barra de contacto fija superior -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <span class="top-bar-location">📍 Tarragona y Reus</span>
+                    <div class="top-bar-contact">
+                        <a href="tel:+34611230547" class="top-bar-phone">📞 611 230 547</a>
+                        <a href="mailto:calvarado1873@gmail.com" class="top-bar-email">✉️ calvarado1873@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="help-hero">
+        <div class="container">
+            <h1>T'Ajudem</h1>
+            <p>Si estás preocupado/a por tu familiar mayor, no estás solo/a.</p>
+            <p style="font-size: 1rem; opacity: 0.9;">
+                <strong>Soy Carmen, cuidadora profesional a Tarragona.</strong> Sé exactamente lo que estás sintiendo.
+            </p>
+        </div>
+    </section>
+
+    <!-- Introducción -->
+    <div class="help-intro">
+        <h2>¿Cuál es tu situación?</h2>
+        <p>Cada familia es diferente. Haz clic en la situación que más se parezca a lo que estás viviendo:</p>
+    </div>
+
+    <!-- Tarjetas Clicables NIVEL 1 -->
+    <div class="cards-container">
+        <div class="pain-cards-grid">
+            
+            <!-- Tarjeta 1: Miedo -->
+            <div class="pain-card" onclick="showSubMenu('miedo')">
+                <span class="pain-card-icon">😰</span>
+                <h3 class="pain-card-title">Quan Tens Por</h3>
+                <p class="pain-card-description">
+                    "I si li passa alguna cosa quan no hi sóc? I si cau?"
+                </p>
+                <span class="pain-card-cta">Ver Opciones →</span>
+            </div>
+
+            <!-- Tarjeta 2: Culpa -->
+            <div class="pain-card" onclick="showSubMenu('culpa')">
+                <span class="pain-card-icon">😔</span>
+                <h3 class="pain-card-title">Quan Sents Culpa</h3>
+                <p class="pain-card-description">
+                    "Hauria de cuidar-lo jo... Sóc mal fill/filla..."
+                </p>
+                <span class="pain-card-cta">Ver Opciones →</span>
+            </div>
+
+            <!-- Tarjeta 3: Agotamiento -->
+            <div class="pain-card" onclick="showSubMenu('agotado')">
+                <span class="pain-card-icon">😓</span>
+                <h3 class="pain-card-title">Quan Estàs Esgotat/da</h3>
+                <p class="pain-card-description">
+                    "No puc més... La meva vida es va aturar..."
+                </p>
+                <span class="pain-card-cta">Ver Opciones →</span>
+            </div>
+
+            <!-- Tarjeta 4: Dinero -->
+            <div class="pain-card" onclick="showSubMenu('dinero')">
+                <span class="pain-card-icon">💰</span>
+                <h3 class="pain-card-title">Te Preocupa el Dinero</h3>
+                <p class="pain-card-description">
+                    "¿Cuánto cuesta? ¿Puedo permitírmelo?"
+                </p>
+                <span class="pain-card-cta">Ver Opciones →</span>
+            </div>
+
+            <!-- Tarjeta 5: Dudas -->
+            <div class="pain-card" onclick="showSubMenu('dudas')">
+                <span class="pain-card-icon">🤔</span>
+                <h3 class="pain-card-title">No Sabes Si Es El Momento</h3>
+                <p class="pain-card-description">
+                    "¿Todavía puede solo/a? ¿No será muy pronto?"
+                </p>
+                <span class="pain-card-cta">Ver Opciones →</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Overlay del Modal -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+
+    <!-- ============================================
+         MODAL: MIEDO (SUB-MENÚ)
+         ============================================ -->
+    <div class="modal-container" id="modal-miedo">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        
+        <!-- Sub-Menú (Nivel 2) -->
+        <div id="submenu-miedo" class="sub-menu">
+            <div class="modal-header">
+                <span class="modal-icon">😰</span>
+                <h2 class="modal-title">Quan Tens Por</h2>
+                <p class="modal-subtitle">¿Qué te preocupa específicamente?</p>
+            </div>
+            
+            <div class="sub-cards-grid">
+                <div class="sub-card" onclick="showDetail('miedo', 'caidas')">
+                    <span class="sub-card-icon">🚶</span>
+                    <h3 class="sub-card-title">Miedo a que Se Caiga</h3>
+                    <p class="sub-card-hint">Clic para ver cómo prevenir →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('miedo', 'medicacion')">
+                    <span class="sub-card-icon">💊</span>
+                    <h3 class="sub-card-title">Miedo al Olvido de Medicación</h3>
+                    <p class="sub-card-hint">Clic para ver soluciones →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('miedo', 'emergencias')">
+                    <span class="sub-card-icon">🚨</span>
+                    <h3 class="sub-card-title">Miedo a Emergencias Sin Avisar</h3>
+                    <p class="sub-card-hint">Clic para ver qué hacer →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('miedo', 'queme')">
+                    <span class="sub-card-icon">🔥</span>
+                    <h3 class="sub-card-title">Miedo a que se Queme</h3>
+                    <p class="sub-card-hint">Gas, cocina, incendios →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('miedo', 'pierda')">
+                    <span class="sub-card-icon">🚪</span>
+                    <h3 class="sub-card-title">Miedo a que Salga y se Pierda</h3>
+                    <p class="sub-card-hint">Desorientación →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('miedo', 'soledad')">
+                    <span class="sub-card-icon">😢</span>
+                    <h3 class="sub-card-title">Miedo a la Soledad</h3>
+                    <p class="sub-card-hint">Depresión, aislamiento →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('miedo', 'noche')">
+                    <span class="sub-card-icon">🌙</span>
+                    <h3 class="sub-card-title">Miedo de Noche</h3>
+                    <p class="sub-card-hint">Caídas nocturnas →</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detalle 1: Caídas -->
+        <div id="detail-miedo-caidas" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('miedo')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">🚶</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Miedo a que Se Caiga</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "¿Y si se cae estando solo/a y no puede pedir ayuda?"
+                </p>
+                
+                <p><strong>Este es el miedo número 1 de todas las familias.</strong> Y es un miedo justificado: las caídas son la principal causa de hospitalización en mayores de 65 años.</p>
+                
+                <h3>¿Por qué pasa?</h3>
+                <ul>
+                    <li>Pérdida de equilibrio con la edad</li>
+                    <li>Medicamentos que causan mareos</li>
+                    <li>Prisa al ir al baño (especialmente de noche)</li>
+                    <li>Obstáculos en casa: alfombras, cables</li>
+                </ul>
+                
+                <h3>Qué puedes hacer AHORA:</h3>
+                <ul>
+                    <li>✅ Elimina alfombras y cables sueltos del suelo</li>
+                    <li>✅ Instala barras de apoyo en baño y pasillos</li>
+                    <li>✅ Asegura buena iluminación nocturna</li>
+                    <li>✅ Revisa que use calzado con suela antideslizante</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Pero la realidad es:</strong> Todas estas medidas ayudan, pero NO eliminan el riesgo. Lo más seguro es que <strong>alguien esté presente</strong> durante las horas de mayor peligro (mañana, noche).</p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>¿No puedes quitarte este miedo?</h3>
+                <p>Hablemos de cómo puedo estar ahí cuando tú no puedes</p>
+                <a href="tel:+34611230547" class="btn btn-secondary btn-large">📞 Llamar: 611 230 547</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 2: Medicación -->
+        <div id="detail-miedo-medicacion" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('miedo')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">💊</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Miedo al Olvido de Medicación</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "¿Y si olvida tomar sus pastillas? ¿Y si las toma doble?"
+                </p>
+                
+                <p>El olvido o error en la medicación puede tener consecuencias graves, especialmente con:</p>
+                <ul>
+                    <li><strong>Diabetes:</strong> Olvido de insulina = crisis diabética</li>
+                    <li><strong>Hipertensión:</strong> Presión descontrolada = riesgo cardiovascular</li>
+                    <li><strong>Anticoagulantes:</strong> Doble dosis = riesgo de sangrados</li>
+                    <li><strong>Cualquier medicamento crónico:</strong> Irregularidad afecta efectividad</li>
+                </ul>
+                
+                <h3>Soluciones que puedes probar:</h3>
+                <ul>
+                    <li>📦 Pastilleros semanales organizados</li>
+                    <li>⏰ Alarmas en el móvil</li>
+                    <li>📝 Lista visible con horarios</li>
+                    <li>📞 Llamada diaria a hora de medicación</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>El problema:</strong> Si tu familiar tiene problemas de memoria, puede apagar la alarma y olvidar por qué sonó. O tomar la medicación y no recordar que ya la tomó.</p>
+                    <p style="margin-top: 1rem;"><strong>La solución real:</strong> Supervisión profesional. Yo preparo, superviso y confirmo que tome la medicación correcta a la hora correcta.</p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Medicación Segura, Sin Preocupaciones</h3>
+                <p>Puedo encargarme del control y supervisión diaria</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Hablemos de Tu Caso</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 3: Emergencias -->
+        <div id="detail-miedo-emergencias" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('miedo')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">🚨</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Miedo a Emergencias Sin Avisar</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Cada vez que llamas y no responde, el corazón se te acelera..."
+                </p>
+                
+                <p>Este miedo te quita el sueño. Lo sé. Estás en el trabajo y tu mente está en casa, pensando:</p>
+                <ul>
+                    <li>"¿Habrá comido?"</li>
+                    <li>"¿Estará bien?"</li>
+                    <li>"¿Por qué no responde al teléfono?"</li>
+                </ul>
+                
+                <h3>Dispositivos de emergencia:</h3>
+                <ul>
+                    <li>Teléfonos con botón SOS</li>
+                    <li>Pulseras de alarma</li>
+                    <li>Colgantes de emergencia</li>
+                    <li>Cámaras de vigilancia</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>La verdad incómoda:</strong> Estos dispositivos funcionan... <strong>si tu familiar puede activarlos</strong>.</p>
+                    <p style="margin-top: 0.5rem;">Pero:</p>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Si se cae y pierde el conocimiento → No puede presionar el botón</li>
+                        <li>Si está desorientado → Olvida que tiene el dispositivo</li>
+                        <li>Si se cayó en la ducha → Probablemente no lleva la pulsera</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Ningún dispositivo sustituye a una persona presente.</strong></p>
+                </div>
+                
+                <h3>Lo que realmente funciona:</h3>
+                <p>Presencia profesional regular. Alguien que:</p>
+                <ul>
+                    <li>✅ Está ahí y puede reaccionar inmediatamente</li>
+                    <li>✅ Previene accidentes antes de que pasen</li>
+                    <li>✅ Detecta señales de alarma temprano</li>
+                    <li>✅ Te mantiene informado/a constantemente</li>
+                </ul>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Duerme Tranquilo/a</h3>
+                <p>Yo estaré ahí. Tú podrás concentrarte en tu vida sin ese miedo constante.</p>
+                <a href="tel:+34611230547" class="btn btn-secondary btn-large">📞 611 230 547</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 4: Miedo a que se Queme -->
+        <div id="detail-miedo-queme" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('miedo')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">🔥</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Miedo a que se Queme</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "¿Y si olvida apagar la cocina? ¿Y si deja el gas abierto?"
+                </p>
+                
+                <p><strong>Este es un miedo muy real.</strong> Los olvidos con la cocina pueden tener consecuencias graves.</p>
+                
+                <h3>Situaciones de riesgo:</h3>
+                <ul>
+                    <li>Olvida apagar el fuego después de cocinar</li>
+                    <li>Deja el gas abierto</li>
+                    <li>Pone algo a cocinar y se olvida</li>
+                    <li>Confunde botones de la cocina (vitrocerámica)</li>
+                    <li>Usa la cocina de noche medio dormido/a</li>
+                </ul>
+                
+                <h3>Medidas preventivas:</h3>
+                <ul>
+                    <li>✅ Cocinas con temporizador automático</li>
+                    <li>✅ Detectores de humo (obligatorio)</li>
+                    <li>✅ Cocina eléctrica (más segura que gas)</li>
+                    <li>✅ Ollas con apagado automático</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>El problema:</strong> Si tu familiar tiene problemas de memoria, puede olvidar que puso algo al fuego. Los temporizadores ayudan, pero ¿y si no escucha la alarma o no recuerda por qué suena?</p>
+                    <p style="margin-top: 1rem;"><strong>La solución real:</strong> Supervisión durante las horas de cocina. Yo puedo prepararle las comidas de forma segura.</p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Evita Accidentes en la Cocina</h3>
+                <p>Puedo encargarme de preparar comidas seguras</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Hablemos</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 5: Miedo a que se Pierda -->
+        <div id="detail-miedo-pierda" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('miedo')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">🚪</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Miedo a que Salga y se Pierda</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Sale a comprar pan y no vuelve... Olvida el camino a casa..."
+                </p>
+                
+                <p><strong>La desorientación espacial es común en personas mayores,</strong> especialmente si hay principios de demencia.</p>
+                
+                <h3>Señales de alarma:</h3>
+                <ul>
+                    <li>Se pierde en lugares conocidos</li>
+                    <li>Olvida cómo volver a casa</li>
+                    <li>Sale "a comprar" y tarda horas</li>
+                    <li>No recuerda su dirección</li>
+                    <li>Confunde rutas habituales</li>
+                </ul>
+                
+                <h3>Qué puedes hacer:</h3>
+                <ul>
+                    <li>📱 GPS en el móvil (si sabe usarlo)</li>
+                    <li>🏷️ Pulsera/tarjeta con nombre, dirección, teléfono</li>
+                    <li>👕 Nota en bolsillo con tu teléfono</li>
+                    <li>👥 Avisar a vecinos de confianza</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>El problema:</strong> Si tu familiar está desorientado, probablemente no recordará que tiene un GPS o una tarjeta. O no sabrá cómo usarlos.</p>
+                    <p style="margin-top: 1rem;"><strong>La solución:</strong> Acompañamiento en salidas. Supervisión para que no salga solo/a en momentos de confusión.</p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Salidas Seguras con Acompañamiento</h3>
+                <p>Puedo acompañarle en sus salidas y paseos</p>
+                <a href="tel:+34611230547" class="btn btn-secondary btn-large">📞 611 230 547</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 6: Miedo a la Soledad -->
+        <div id="detail-miedo-soledad" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('miedo')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">😢</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Miedo a la Soledad de Tu Familiar</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Está solo/a todo el día... Ya no habla con nadie... Se está apagando..."
+                </p>
+                
+                <p><strong>La soledad en personas mayores es un problema serio de salud.</strong> No es solo tristeza, tiene consecuencias físicas.</p>
+                
+                <h3>Efectos de la soledad:</h3>
+                <ul>
+                    <li><strong>Depresión:</strong> Pierde ganas de vivir, de comer, de cuidarse</li>
+                    <li><strong>Deterioro cognitivo acelerado:</strong> Sin estímulo mental, la mente se deteriora más rápido</li>
+                    <li><strong>Aislamiento:</strong> Cada vez sale menos, habla menos, se cierra más</li>
+                    <li><strong>Pérdida de capacidades:</strong> "Úsalo o piérdelo" - aplica a funciones mentales y físicas</li>
+                </ul>
+                
+                <h3>Señales de que está afectándole:</h3>
+                <ul>
+                    <li>Ya no quiere salir de casa</li>
+                    <li>Habla menos, respuestas más cortas</li>
+                    <li>Ha perdido interés en cosas que le gustaban</li>
+                    <li>Come menos, se cuida menos</li>
+                    <li>Cuando llamas, notas que está apático/a</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>La compañía no es un lujo. Es una necesidad.</strong></p>
+                    <p style="margin-top: 1rem;">Mi trabajo no es solo cambiar pañales o dar medicación. Es conversar, escuchar, estimular, hacer que se sientan personas, no solo "pacientes".</p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>No Solo Cuidado, Compañía Real</h3>
+                <p>Alguien con quien conversar, reír, sentirse acompañado/a</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Més Informació</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 7: Miedo de Noche -->
+        <div id="detail-miedo-noche" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('miedo')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">🌙</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Miedo de Noche</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Por la noche es cuando más miedo tengo... Se levanta al baño medio dormido..."
+                </p>
+                
+                <p><strong>Las noches son el momento de mayor riesgo.</strong> La mayoría de caídas graves ocurren de noche yendo al baño.</p>
+                
+                <h3>Por qué la noche es peligrosa:</h3>
+                <ul>
+                    <li>Medio dormido/a → Menos coordinación</li>
+                    <li>Oscuridad → No ve bien</li>
+                    <li>Prisa por ir al baño → Se apresura</li>
+                    <li>Desorientación nocturna (común en mayores)</li>
+                    <li>Medicamentos para dormir → Mareos al levantarse</li>
+                </ul>
+                
+                <h3>Medidas preventivas:</h3>
+                <ul>
+                    <li>✅ Luz nocturna en pasillo y baño</li>
+                    <li>✅ Baño portátil cerca de la cama</li>
+                    <li>✅ Barras de apoyo para levantarse</li>
+                    <li>✅ Suelo antideslizante</li>
+                    <li>✅ Timbre/interfono para llamarte si necesita</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Pero seamos realistas:</strong> Si se cae de noche, ¿cuánto tardas en enterarte? ¿10 minutos? ¿1 hora? ¿Hasta la mañana siguiente?</p>
+                    <p style="margin-top: 1rem;"><strong>La atención nocturna existe precisamente para esto:</strong> Alguien que esté ahí si se levanta, que le ayude ir al baño, que pueda reaccionar inmediatamente.</p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Atenció Nocturna Disponible</h3>
+                <p>Para que tú y tu familiar duerman tranquilos</p>
+                <a href="tel:+34611230547" class="btn btn-secondary btn-large">📞 Consultar Disponibilitat</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         MODAL: CULPA (SUB-MENÚ)
+         ============================================ -->
+    <div class="modal-container" id="modal-culpa">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        
+        <!-- Sub-Menú -->
+        <div id="submenu-culpa" class="sub-menu">
+            <div class="modal-header">
+                <span class="modal-icon">😔</span>
+                <h2 class="modal-title">Quan Sents Culpa</h2>
+                <p class="modal-subtitle">¿Qué tipo de culpa sientes?</p>
+            </div>
+            
+            <div class="sub-cards-grid">
+                <div class="sub-card" onclick="showDetail('culpa', 'deberia')">
+                    <span class="sub-card-icon">💔</span>
+                    <h3 class="sub-card-title">"Debería Cuidarlo Yo"</h3>
+                    <p class="sub-card-hint">Clic para leer más →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('culpa', 'juzgan')">
+                    <span class="sub-card-icon">👥</span>
+                    <h3 class="sub-card-title">"Mi Familia Me Juzga"</h3>
+                    <p class="sub-card-hint">Clic para leer más →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('culpa', 'sacrificio')">
+                    <span class="sub-card-icon">❤️</span>
+                    <h3 class="sub-card-title">"Él/Ella Sacrificó Todo por Mí"</h3>
+                    <p class="sub-card-hint">Clic para leer más →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('culpa', 'trabajo')">
+                    <span class="sub-card-icon">💼</span>
+                    <h3 class="sub-card-title">Trabajo vs Familia</h3>
+                    <p class="sub-card-hint">El dilema constante →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('culpa', 'hijos')">
+                    <span class="sub-card-icon">👨‍👩‍👧</span>
+                    <h3 class="sub-card-title">Mis Hijos También Me Necesitan</h3>
+                    <p class="sub-card-hint">Dividido/a entre generaciones →</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detalle 1: Debería cuidarlo yo -->
+        <div id="detail-culpa-deberia" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('culpa')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">💔</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">"Debería Cuidarlo Yo"</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Si realmente lo quisiera, podría hacerlo yo..."
+                </p>
+                
+                <p><strong>Déjame decirte algo que necesitas escuchar:</strong></p>
+                
+                <p style="font-size: 1.25rem; padding: 1.5rem; background: var(--primary-light); border-radius: var(--border-radius); margin: 1.5rem 0; font-weight: 600; text-align: center;">
+                    Tu madre/padre no te necesita como enfermero/a.<br>
+                    <strong style="color: var(--primary-dark);">Te necesita como hijo/a.</strong>
+                </p>
+                
+                <p>Necesita que cuando vengas a visitarle:</p>
+                <ul>
+                    <li>Vengas con <strong>ganas</strong>, no agotado/a</li>
+                    <li>Vengas con <strong>paciencia</strong>, no irritable</li>
+                    <li>Vengas a <strong>conversar</strong>, no solo a tareas</li>
+                    <li>Vengas a <strong>disfrutar</strong> el tiempo juntos</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Pregúntate esto:</strong></p>
+                    <p>¿Tu familiar prefiere verte 2 horas al día feliz y presente, o 8 horas agotado/a y resentido/a?</p>
+                    <p style="margin-top: 1rem;"><strong>Contratar ayuda profesional NO es abandonar. Es AMAR de forma inteligente.</strong></p>
+                </div>
+                
+                <p>Es reconocer que tu familiar merece los MEJORES cuidados. Y a veces, eso significa contratar a alguien con la formación adecuada.</p>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>No Eres Mal Hijo/Hija</h3>
+                <p>Eres un buen hijo/hija PORQUE buscas la mejor ayuda</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Hablemos Sin Juicios</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 2: Me juzgan -->
+        <div id="detail-culpa-juzgan" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('culpa')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">👥</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">"Mi Familia Me Juzga"</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Mis hermanos dicen que debería hacerlo yo... Que hay que ahorrar..."
+                </p>
+                
+                <p><strong>Es fácil juzgar desde fuera cuando no eres tú quien está llevando el peso.</strong></p>
+                
+                <h3>La realidad que nadie dice:</h3>
+                <ul>
+                    <li>Los que más opinan, suelen ser los que menos ayudan</li>
+                    <li>Tú conoces la situación REAL mejor que nadie</li>
+                    <li>Tú estás tomando la decisión RESPONSABLE</li>
+                    <li>Ellos no están ahí a las 3AM cuando tu familiar te necesita</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Pregunta que deja callados a todos:</strong></p>
+                    <p>"¿Cuántos días a la semana puedes venir tú a ayudar?"</p>
+                    <p style="margin-top: 1rem;">Verás cómo las opiniones desaparecen cuando les pides compromiso real.</p>
+                </div>
+                
+                <h3>Tu única responsabilidad:</h3>
+                <p>Es con el <strong>bienestar de tu familiar</strong>. No con las opiniones de quienes no están involucrados.</p>
+                
+                <p style="font-size: 1.25rem; font-weight: 600; color: var(--primary-dark); margin-top: 2rem; text-align: center; background: var(--primary-light); padding: 1.5rem; border-radius: var(--border-radius);">
+                    Tú estás haciendo lo correcto. Punto.
+                </p>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Haz lo Correcto para Tu Familiar</h3>
+                <p>Las opiniones pasan. Las consecuencias de no actuar, quedan.</p>
+                <a href="tel:+34611230547" class="btn btn-secondary btn-large">📞 611 230 547</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 3: Sacrificio -->
+        <div id="detail-culpa-sacrificio" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('culpa')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">❤️</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">"Él/Ella Sacrificó Todo por Mí"</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Ahora me toca a mí. Debo devolverle todo lo que hizo por mí..."
+                </p>
+                
+                <p>Y ahora quieres devolverle ese amor. <strong>Lo entiendo perfectamente.</strong></p>
+                
+                <p>Pero déjame preguntarte algo:</p>
+                
+                <div class="highlight-box">
+                    <p><strong>¿Tu madre querría verte así?</strong></p>
+                    <ul style="margin-top: 1rem;">
+                        <li>Agotado/a físicamente</li>
+                        <li>Sin tiempo para tu familia propia</li>
+                        <li>Tu salud deteriorándose</li>
+                        <li>Tu carrera profesional sufriendo</li>
+                        <li>Sin vida social ni momentos para ti</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>¿De verdad crees que tu padre/madre querría esto para ti?</strong></p>
+                </div>
+                
+                <h3>Honrar su sacrificio de la forma correcta:</h3>
+                <p>La mejor forma de honrar lo que hizo por ti NO es destruirte cuidándole.</p>
+                <p>Es <strong>asegurar que reciba el mejor cuidado posible</strong> mientras tú mantienes tu vida, tu salud, tu familia.</p>
+                
+                <p style="font-size: 1.125rem; background: var(--primary-light); padding: 1.5rem; border-radius: var(--border-radius); margin-top: 2rem;">
+                    <strong>Tomar decisiones inteligentes que aseguren su bienestar SIN destruir el tuyo:</strong> Eso sí es amor verdadero.
+                </p>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Toma la Decisión Inteligente</h3>
+                <p>Hablemos de cómo cuidar a tu familiar sin sacrificarte</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Contactar Ahora</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 4: Trabajo vs Familia -->
+        <div id="detail-culpa-trabajo" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('culpa')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">💼</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Trabajo vs Familia</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Me siento mal por irme a trabajar... Mi jefe se queja de mis ausencias..."
+                </p>
+                
+                <p><strong>Estás atrapado/a entre dos mundos:</strong> Tu responsabilidad laboral y tu responsabilidad familiar.</p>
+                
+                <h3>El dilema constante:</h3>
+                <ul>
+                    <li>Llamadas del trabajo durante el cuidado</li>
+                    <li>Llamadas de emergencia familiar durante el trabajo</li>
+                    <li>Ausentismo laboral → Llamadas de atención</li>
+                    <li>No puedes concentrarte en ninguno de los dos</li>
+                    <li>Miedo a perder tu empleo</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>La realidad:</strong> No puedes estar en dos sitios a la vez. Y tu trabajo es necesario:</p>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Para mantener a tu propia familia</li>
+                        <li>Para pagar precisamente el cuidado de tu familiar</li>
+                        <li>Para tu propia estabilidad mental</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Perder tu empleo NO ayudará a nadie.</strong></p>
+                </div>
+                
+                <h3>La solución no es elegir:</h3>
+                <p>Es delegar el cuidado durante tus horas laborales para poder:</p>
+                <ul>
+                    <li>✅ Trabajar tranquilo/a sin llamadas de emergencia</li>
+                    <li>✅ Mantener tu estabilidad laboral y económica</li>
+                    <li>✅ Llegar a casa sabiendo que tu familiar estuvo bien atendido</li>
+                    <li>✅ Ser productivo/a en el trabajo (lo necesitas para pagar ayuda)</li>
+                </ul>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Recupera Tu Balance</h3>
+                <p>No elijas entre trabajo y familia. Puedes tener ambos.</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Hablemos de Soluciones</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 5: Mis Hijos Me Necesitan -->
+        <div id="detail-culpa-hijos" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('culpa')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">👨‍👩‍👧</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Mis Hijos También Me Necesitan</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Mis hijos están creciendo sin mí... Mi pareja dice que ya no estoy presente..."
+                </p>
+                
+                <p><strong>Estás dividido/a entre generaciones.</strong> Tus padres te necesitan, pero tus hijos también. Tu pareja también.</p>
+                
+                <h3>Lo que estás perdiendo:</h3>
+                <ul>
+                    <li>Cenas familiares → Siempre llegas tarde o estresado/a</li>
+                    <li>Actividades escolares → No puedes ir porque tienes que cuidar</li>
+                    <li>Tiempo de pareja → Llevas meses sin una cita</li>
+                    <li>Ser presente → Físicamente estás, mentalmente en otra parte</li>
+                    <li>Momentos únicos → Los niños crecen, no vuelven</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Tu pareja te dice:</strong> "Ya no estás presente. Siempre estás pensando en tu madre/padre."</p>
+                    <p style="margin-top: 0.5rem;"><strong>Tus hijos:</strong> "Nunca puedes venir a mis cosas."</p>
+                    <p style="margin-top: 0.5rem;"><strong>Y tú te sientes:</strong> Culpable con todos. No llegas a nada bien.</p>
+                    <p style="margin-top: 1rem; font-weight: 600;">No puedes descuidar a tus hijos por cuidar a tus padres. Pero tampoco puedes abandonar a tus padres.</p>
+                </div>
+                
+                <h3>La solución no es elegir entre tus hijos y tus padres:</h3>
+                <p><strong>Es delegar el cuidado profesional</strong> para poder estar presente en ambos.</p>
+                <ul>
+                    <li>✅ Durante el día → Yo cuido a tus padres</li>
+                    <li>✅ Por la tarde → Tú puedes estar con tus hijos</li>
+                    <li>✅ Fines de semana → Yo cubro para que tengas vida familiar</li>
+                    <li>✅ Emergencias → No te sacan de eventos importantes</li>
+                </ul>
+                
+                <p style="font-size: 1.125rem; background: var(--primary-light); padding: 1.5rem; border-radius: var(--border-radius); margin-top: 2rem; font-weight: 600; text-align: center;">
+                    Tus hijos solo tienen una infancia. No la pierdas por culpa que no deberías sentir.
+                </p>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>No Elijas. Puedes Cuidar a Ambos</h3>
+                <p>Hablemos de cómo organizar el tiempo para todos</p>
+                <a href="tel:+34611230547" class="btn btn-secondary btn-large">📞 611 230 547</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         MODAL: AGOTADO (SUB-MENÚ)
+         ============================================ -->
+    <div class="modal-container" id="modal-agotado">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        
+        <!-- Sub-Menú -->
+        <div id="submenu-agotado" class="sub-menu">
+            <div class="modal-header">
+                <span class="modal-icon">😓</span>
+                <h2 class="modal-title">Quan Estàs Esgotat/da</h2>
+                <p class="modal-subtitle">¿Qué te está pasando?</p>
+            </div>
+            
+            <div class="sub-cards-grid">
+                <div class="sub-card" onclick="showDetail('agotado', 'test')">
+                    <span class="sub-card-icon">📋</span>
+                    <h3 class="sub-card-title">Test de Agotamiento</h3>
+                    <p class="sub-card-hint">¿Estás agotado/a? Averígualo →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('agotado', 'horas')">
+                    <span class="sub-card-icon">⏰</span>
+                    <h3 class="sub-card-title">Unas Horas SÍ Ayudan</h3>
+                    <p class="sub-card-hint">No necesitas 24/7 →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('agotado', 'dormir')">
+                    <span class="sub-card-icon">😴</span>
+                    <h3 class="sub-card-title">No Duermo Bien</h3>
+                    <p class="sub-card-hint">Insomnio por preocupación →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('agotado', 'salud')">
+                    <span class="sub-card-icon">🏋️</span>
+                    <h3 class="sub-card-title">Mi Salud Empeora</h3>
+                    <p class="sub-card-hint">Dolores, estrés, ansiedad →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('agotado', 'vida')">
+                    <span class="sub-card-icon">🚫</span>
+                    <h3 class="sub-card-title">Ya No Tengo Vida Propia</h3>
+                    <p class="sub-card-hint">Recupera tu libertad →</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detalle 1: Test -->
+        <div id="detail-agotado-test" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('agotado')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">📋</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">¿Estás Agotado/a? Test Rápido</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    Responde SÍ o NO honestamente:
+                </p>
+                
+                <div class="checklist-box">
+                    <h4>Test de Agotamiento del Cuidador:</h4>
+                    <ul>
+                        <li>¿Llevas más de 3 meses sin un día completo libre?</li>
+                        <li>¿Te cuesta concentrarte en otras cosas?</li>
+                        <li>¿Has tenido conflictos familiares por esta situación?</li>
+                        <li>¿Tu salud física ha empeorado?</li>
+                        <li>¿Sientes que "ya no puedes más"?</li>
+                        <li>¿Has abandonado actividades que antes disfrutabas?</li>
+                        <li>¿Te sientes solo/a en esto?</li>
+                        <li>¿Tienes cambios de humor frecuentes?</li>
+                    </ul>
+                </div>
+                
+                <div style="margin: 2rem 0; padding: 1.5rem; background: var(--primary-light); border-radius: var(--border-radius-lg); text-align: center;">
+                    <p style="font-size: 1.125rem; margin-bottom: 1rem; font-weight: 600;"><strong>EVALUACIÓN:</strong></p>
+                    <p><strong>1-2 SÍ:</strong> En alerta. Considera pedir ayuda pronto.</p>
+                    <p><strong>3-5 SÍ:</strong> Agotamiento moderado. Necesitas relevo YA.</p>
+                    <p><strong>6+ SÍ:</strong> Agotamiento severo. Situación urgente.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <p><strong>Si respondiste SÍ a 3 o más:</strong> No esperes a colapsar completamente. Buscar ayuda ahora no es rendirse, es ser inteligente.</p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>No Llegues al Colapso</h3>
+                <p>Hablemos de cómo darte un respiro</p>
+                <a href="tel:+34611230547" class="btn btn-secondary btn-large">📞 611 230 547</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 2: Unas horas sí ayudan -->
+        <div id="detail-agotado-horas" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('agotado')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">⏰</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Unas Horas SÍ Marcan la Diferencia</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Pero con solo 4 horas no será suficiente..."
+                </p>
+                
+                <p><strong>Te sorprendería saber cuánto cambia tu vida con solo 4 horas de ayuda al día.</strong></p>
+                
+                <h3>Escenario ANTES (Sin ayuda):</h3>
+                <ul>
+                    <li>Despiertas pensando en las tareas del día</li>
+                    <li>Baño, medicación, comida, limpieza...</li>
+                    <li>Vas al trabajo estresado/a</li>
+                    <li>Llamas constantemente para verificar que esté bien</li>
+                    <li>Vuelves agotado/a a hacer todo de nuevo</li>
+                    <li>Te duermes preocupado/a</li>
+                </ul>
+                
+                <h3>Escenario DESPUÉS (Con 4 horas de ayuda):</h3>
+                <ul>
+                    <li>✅ Despiertas sabiendo que de 10-14h está cubierto</li>
+                    <li>✅ Vas al trabajo <strong>tranquilo/a</strong></li>
+                    <li>✅ Llegas a casa y <strong>lo importante ya está hecho</strong></li>
+                    <li>✅ Puedes ser hijo/a, no solo cuidador/a</li>
+                    <li>✅ Duermes mejor sabiendo que hay supervisión diaria</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>No necesitas ayuda 24/7 para recuperar tu vida.</strong></p>
+                    <p>Con 4 horas al día en el momento clave, la mayoría de familias ya recuperan su equilibrio.</p>
+                    <p style="margin-top: 1rem;">Es la diferencia entre <strong>sobrevivir</strong> y <strong>vivir</strong>.</p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Recupera Tu Equilibrio</h3>
+                <p>Veamos qué horas necesitas para respirar</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Hablemos de Tu Caso</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 3: No Duermo Bien -->
+        <div id="detail-agotado-dormir" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('agotado')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">😴</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">No Duermo Bien Hace Meses</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Me despierto 5 veces por noche pensando en mi familiar..."
+                </p>
+                
+                <p><strong>El insomnio del cuidador es uno de los problemas de salud más comunes.</strong> Y el más peligroso a largo plazo.</p>
+                
+                <h3>Por qué no puedes dormir:</h3>
+                <ul>
+                    <li><strong>Preocupación constante:</strong> "¿Estará bien?"</li>
+                    <li><strong>Interrupciones reales:</strong> Llamadas nocturnas, levantarte a ayudar</li>
+                    <li><strong>Hipervigilancia:</strong> Cualquier ruido te despierta</li>
+                    <li><strong>Ansiedad anticipatoria:</strong> "Mañana tengo que..."</li>
+                    <li><strong>No desconectas:</strong> Tu mente no descansa aunque tu cuerpo esté en cama</li>
+                </ul>
+                
+                <h3>Consecuencias del mal sueño crónico:</h3>
+                <ul>
+                    <li>Irritabilidad extrema</li>
+                    <li>Problemas de memoria y concentración</li>
+                    <li>Sistema inmune debilitado → Enfermas más fácil</li>
+                    <li>Riesgo de depresión y ansiedad</li>
+                    <li>Errores en el cuidado por cansancio</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>No puedes cuidar bien si no duermes bien.</strong></p>
+                    <p style="margin-top: 1rem;">El cansancio extremo lleva a errores: olvidas dar medicación, te impacientas, no detectas señales de alarma.</p>
+                    <p style="margin-top: 1rem;"><strong>Necesitas dormir UNA noche completa sin interrupciones. Aunque sea una vez a la semana.</strong></p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Vuelve a Dormir Tranquilo/a</h3>
+                <p>Atención nocturna o relevo para que descanses</p>
+                <a href="tel:+34611230547" class="btn btn-secondary btn-large">📞 611 230 547</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 4: Mi Salud Empeora -->
+        <div id="detail-agotado-salud" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('agotado')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">🏋️</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Mi Salud Está Empeorando</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Me duele la espalda, tengo dolores de cabeza constantes, tomo ansiolíticos..."
+                </p>
+                
+                <p><strong>El cuidado físico de una persona mayor pasa factura a TU cuerpo.</strong></p>
+                
+                <h3>Problemas de salud comunes en cuidadores:</h3>
+                <ul>
+                    <li><strong>Dolores de espalda:</strong> Por movilizaciones incorrectas</li>
+                    <li><strong>Lesiones musculares:</strong> Levantar/mover sin técnica adecuada</li>
+                    <li><strong>Estrés crónico:</strong> Cortisol alto constante</li>
+                    <li><strong>Ansiedad y depresión:</strong> Salud mental deteriorada</li>
+                    <li><strong>Hipertensión:</strong> Estrés sostenido</li>
+                    <li><strong>Sistema inmune débil:</strong> Enfermas más frecuentemente</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Pregunta importante:</strong> ¿Cuándo fue la última vez que fuiste al médico por TI?</p>
+                    <p style="margin-top: 1rem;">La mayoría de cuidadores familiares descuidan completamente su propia salud. "No tengo tiempo", "No es tan grave", "Primero mi padre/madre".</p>
+                    <p style="margin-top: 1rem; font-weight: 600;">Pero si TÚ caes, ¿quién cuidará a tu familiar?</p>
+                </div>
+                
+                <h3>Por qué necesitas ayuda profesional:</h3>
+                <ul>
+                    <li>✅ Profesional con técnicas correctas de movilización</li>
+                    <li>✅ Sin daño a su espalda (está entrenada)</li>
+                    <li>✅ Tú descansas físicamente</li>
+                    <li>✅ Puedes ir al médico, fisio, cuidarte</li>
+                </ul>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Protege Tu Salud También</h3>
+                <p>Tu salud importa tanto como la de tu familiar</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Hablemos</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 5: Ya No Tengo Vida -->
+        <div id="detail-agotado-vida" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('agotado')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">🚫</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Ya No Tengo Vida Propia</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Hace meses que no veo amigos... Abandoné mis hobbies... No puedo hacer planes..."
+                </p>
+                
+                <p><strong>Tu vida se ha reducido a: trabajo - cuidar - dormir (mal). Repetir.</strong></p>
+                
+                <h3>Lo que has abandonado:</h3>
+                <ul>
+                    <li>Amigos → "No puedo quedar, tengo que..."</li>
+                    <li>Hobbies → "Ya no tengo tiempo ni ganas"</li>
+                    <li>Ejercicio → "No hay tiempo"</li>
+                    <li>Pareja → "Llevamos meses sin salir solos"</li>
+                    <li>TÚ → "No sé ni quién soy ya"</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>¿Sabes qué le dirías a un amigo/a en tu situación?</strong></p>
+                    <p style="margin-top: 0.5rem;">"Necesitas ayuda. Esto no es sostenible. Te vas a quemar."</p>
+                    <p style="margin-top: 1rem; font-weight: 600;">¿Por qué no te aplicas ese mismo consejo?</p>
+                </div>
+                
+                <h3>Recuperar tu vida no es egoísmo:</h3>
+                <p>Con solo 4 horas diarias de ayuda profesional puedes:</p>
+                <ul>
+                    <li>✅ Ir al gimnasio 2 veces/semana</li>
+                    <li>✅ Quedar con amigos un café</li>
+                    <li>✅ Tener una tarde para ti cada semana</li>
+                    <li>✅ Salir con tu pareja</li>
+                    <li>✅ Respirar</li>
+                </ul>
+                
+                <p style="font-size: 1.125rem; background: var(--primary-light); padding: 1.5rem; border-radius: var(--border-radius); margin-top: 2rem; text-align: center; font-weight: 600;">
+                    No estás pidiendo lujos. Estás pidiendo poder vivir, no solo sobrevivir.
+                </p>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Recupera Tu Vida</h3>
+                <p>Mereces tener tiempo para ti sin descuidar a tu familiar</p>
+                <a href="tel:+34611230547" class="btn btn-secondary btn-large">📞 Llamar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         MODAL: DINERO (SUB-MENÚ)
+         ============================================ -->
+    <div class="modal-container" id="modal-dinero">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        
+        <!-- Sub-Menú -->
+        <div id="submenu-dinero" class="sub-menu">
+            <div class="modal-header">
+                <span class="modal-icon">💰</span>
+                <h2 class="modal-title">Te Preocupa el Dinero</h2>
+                <p class="modal-subtitle">¿Qué te preocupa específicamente?</p>
+            </div>
+            
+            <div class="sub-cards-grid">
+                <div class="sub-card" onclick="showDetail('dinero', 'residencia')">
+                    <span class="sub-card-icon">🏥</span>
+                    <h3 class="sub-card-title">Residencia vs Casa</h3>
+                    <p class="sub-card-hint">Comparativa de costes →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('dinero', 'hospitalizacion')">
+                    <span class="sub-card-icon">🏥</span>
+                    <h3 class="sub-card-title">El Problema Real: Hospitalización</h3>
+                    <p class="sub-card-hint">Por qué prevenir es clave →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('dinero', 'opciones')">
+                    <span class="sub-card-icon">💡</span>
+                    <h3 class="sub-card-title">Opciones Flexibles</h3>
+                    <p class="sub-card-hint">Según tu presupuesto →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('dinero', 'calculadora')">
+                    <span class="sub-card-icon">🧮</span>
+                    <h3 class="sub-card-title">Calculadora de Costes</h3>
+                    <p class="sub-card-hint">¿Cuánto me costaría? →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('dinero', 'formas-pago')">
+                    <span class="sub-card-icon">💳</span>
+                    <h3 class="sub-card-title">Formas de Pago</h3>
+                    <p class="sub-card-hint">Opciones de pago →</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detalle 1: Residencia vs Casa -->
+        <div id="detail-dinero-residencia" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('dinero')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">🏥</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Residencia vs Cuidado en Casa</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "No puedo pagar una residencia de 3.000€/mes..."
+                </p>
+                
+                <p><strong>Buenas noticias: NO necesitas pagar una residencia.</strong></p>
+                
+                <h3>Comparativa Real a Tarragona:</h3>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0;">
+                    <div style="background: #FFE5E5; padding: 1.5rem; border-radius: var(--border-radius); text-align: center;">
+                        <h4 style="color: var(--error); margin-bottom: 1rem;">🏢 Residencia</h4>
+                        <p style="font-size: 2rem; font-weight: 700; color: var(--error); margin: 0;">2.500-3.500€</p>
+                        <p style="font-size: 0.875rem; color: var(--text-gray);">por mes</p>
+                        <ul style="text-align: left; margin-top: 1rem; font-size: 0.9rem; list-style: none; padding: 0;">
+                            <li>❌ Fuera de su hogar</li>
+                            <li>❌ Atención compartida</li>
+                            <li>❌ Horarios rígidos</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #E8F4F8; padding: 1.5rem; border-radius: var(--border-radius); text-align: center;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🏠 Cuidado en Casa</h4>
+                        <p style="font-size: 2rem; font-weight: 700; color: var(--primary-color); margin: 0;">500-1.200€</p>
+                        <p style="font-size: 0.875rem; color: var(--text-gray);">por mes (4h/día)</p>
+                        <ul style="text-align: left; margin-top: 1rem; font-size: 0.9rem; list-style: none; padding: 0;">
+                            <li>✅ En su hogar familiar</li>
+                            <li>✅ Atención 1:1</li>
+                            <li>✅ Horarios flexibles</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; font-size: 1.5rem; font-weight: 700; color: var(--success); margin: 2rem 0; background: var(--primary-light); padding: 1.5rem; border-radius: var(--border-radius);">
+                    AHORRO: 1.500-2.500 €/mes
+                </p>
+                
+                <div class="highlight-box">
+                    <p><strong>La mayoría de familias NO necesitan residencia.</strong> Necesitan apoyo unas horas al día.</p>
+                    <p style="margin-top: 1rem;">Tu familiar puede seguir en su casa, con sus cosas, sus recuerdos, su barrio.</p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Mucho Más Asequible de Lo Que Piensas</h3>
+                <p>Te digo exactamente cuánto costaría según tus necesidades</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Solicitar Informació</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 2: Hospitalización -->
+        <div id="detail-dinero-hospitalizacion" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('dinero')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">🏥</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">El Verdadero Problema: Hospitalización</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    En España la sanidad es pública. Pero eso no evita el sufrimiento...
+                </p>
+                
+                <p><strong>El mayor riesgo no es el gasto. Es la hospitalización y lo que viene después:</strong></p>
+                
+                <h3>El verdadero coste de una hospitalización:</h3>
+                <ul>
+                    <li><strong>Sufrimiento de tu familiar:</strong> Dolor, miedo, desorientación en hospital</li>
+                    <li><strong>Deterioro acelerado:</strong> Muchos mayores no vuelven a ser los mismos después</li>
+                    <li><strong>Post-hospitalización:</strong> Necesitará MÁS cuidados de los que necesitaba antes</li>
+                    <li><strong>El trauma familiar:</strong> Ver a tu ser querido sufrir</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Caso real:</strong> Una hija esperó "hasta que fuera necesario".</p>
+                    <p style="margin-top: 0.5rem;">Una noche, su padre se cayó yendo al baño. Fractura de cadera. 6 meses de recuperación. <strong>El padre nunca volvió a ser el mismo.</strong></p>
+                    <p style="margin-top: 1rem; font-weight: 600;">El dolor no fue el dinero. Fue ver a su padre sufrir. La hospitalización, la rehabilitación, el deterioro físico y mental que vino después.</p>
+                    <p style="margin-top: 1rem; background: white; padding: 1rem; border-radius: var(--border-radius);"><strong>Si hubiera tenido a alguien presente esas horas, no habría pasado.</strong></p>
+                </div>
+                
+                <h3>Por eso el cuidado profesional es prevención:</h3>
+                <ul>
+                    <li>✅ Evita caídas estando presente</li>
+                    <li>✅ Detecta problemas antes de que sean graves</li>
+                    <li>✅ Supervisión de medicación = menos complicaciones</li>
+                    <li>✅ Movilidad regular = menos deterioro</li>
+                </ul>
+                
+                <p style="font-size: 1.25rem; font-weight: 600; text-align: center; padding: 1.5rem; background: var(--primary-light); border-radius: var(--border-radius); margin-top: 2rem; color: var(--primary-dark);">
+                    No se trata de gastar dinero. Se trata de <strong>evitar sufrimiento</strong>.
+                </p>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>No Esperes a la Emergencia</h3>
+                <p>Hablemos de prevención antes de que pase algo</p>
+                <a href="tel:+34611230547" class="btn btn-secondary btn-large">📞 Trucar Ara</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 3: Calculadora -->
+        <div id="detail-dinero-calculadora" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('dinero')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">🧮</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Calculadora: ¿Cuánto Me Costaría?</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Necesito saber cuánto me costaría antes de decidir..."
+                </p>
+                
+                <p><strong>Es normal querer saber el coste antes.</strong> Aquí tienes una guía orientativa basada en mis tarifas:</p>
+                
+                <div style="background: var(--primary-light); padding: 2rem; border-radius: var(--border-radius-lg); margin: 2rem 0;">
+                    <h3 style="color: var(--primary-dark); text-align: center; margin-bottom: 1.5rem;">💰 Tarifas Orientativas 2025</h3>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 1rem;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">⏰ ATENCIÓN POR HORAS</h4>
+                        <p><strong>Tarifa:</strong> 13-14 €/hora (días laborables)</p>
+                        <p><strong>Ejemplo:</strong></p>
+                        <ul>
+                            <li>2 horas/día x 5 días = 10 horas/semana</li>
+                            <li>10 horas x 13€ = <strong>130€/semana</strong></li>
+                            <li>Por mes (4 semanas) = <strong>~520€/mes</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 1rem;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🌅 MEDIA JORNADA (4 horas)</h4>
+                        <p><strong>Tarifa:</strong> 50-55 €/día</p>
+                        <p><strong>Ejemplo:</strong></p>
+                        <ul>
+                            <li>5 días/semana = <strong>250-275€/semana</strong></li>
+                            <li>Por mes = <strong>~1.000-1.100€/mes</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: var(--border-radius);">
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🌞 JORNADA COMPLETA (8 horas)</h4>
+                        <p><strong>Tarifa:</strong> 100-110 €/día</p>
+                        <p><strong>Ejemplo:</strong></p>
+                        <ul>
+                            <li>5 días/semana = <strong>500-550€/semana</strong></li>
+                            <li>Por mes = <strong>~2.000-2.200€/mes</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Compara con Residencia:</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+                    <div style="background: #FFE5E5; padding: 1rem; border-radius: var(--border-radius); text-align: center;">
+                        <p style="font-weight: 600; color: var(--error);">Residencia</p>
+                        <p style="font-size: 2rem; font-weight: 700; color: var(--error); margin: 0.5rem 0;">2.500-3.500€</p>
+                        <p style="font-size: 0.875rem;">por mes</p>
+                    </div>
+                    <div style="background: #E8F4F8; padding: 1rem; border-radius: var(--border-radius); text-align: center;">
+                        <p style="font-weight: 600; color: var(--primary-color);">Cuidado Casa (4h)</p>
+                        <p style="font-size: 2rem; font-weight: 700; color: var(--primary-color); margin: 0.5rem 0;">1.000-1.100€</p>
+                        <p style="font-size: 0.875rem;">por mes</p>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; font-size: 1.25rem; font-weight: 700; color: var(--success); background: white; padding: 1.5rem; border-radius: var(--border-radius);">
+                    AHORRO: 1.500-2.500 €/mes
+                </p>
+                
+                <div class="highlight-box">
+                    <p><strong>Precios aproximados.</strong> Cada caso es diferente según:</p>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Horas exactas que necesites</li>
+                        <li>Días de la semana (laborables o fines de semana)</li>
+                        <li>Horarios (diurnos, nocturnos)</li>
+                        <li>Nivel de dependencia</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Llámame y te doy un presupuesto exacto para tu situación específica.</strong></p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Presupuesto Personalizado Gratis</h3>
+                <p>Te digo exactamente cuánto sería en tu caso</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Solicitar Presupuesto</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 4: Opciones flexibles -->
+        <div id="detail-dinero-opciones" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('dinero')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">💡</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Opciones Flexibles de Pago</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "No puedo pagar mucho, pero necesito ayuda..."
+                </p>
+                
+                <p><strong>No necesitas contratarme a tiempo completo. Hay opciones:</strong></p>
+                
+                <div style="background: var(--bg-light); padding: 1.5rem; border-radius: var(--border-radius); margin: 1.5rem 0;">
+                    <h4 style="color: var(--primary-dark); margin-bottom: 1rem;">💰 Opciones según tu presupuesto:</h4>
+                    
+                    <p><strong>Opción Económica: 2 horas al día</strong></p>
+                    <ul>
+                        <li>Medicación + Comida principal</li>
+                        <li>Aprox. 250-300 €/mes</li>
+                    </ul>
+                    
+                    <p style="margin-top: 1rem;"><strong>Opción Estándar: 4 horas al día</strong></p>
+                    <ul>
+                        <li>Rutina completa (higiene + comidas + medicación)</li>
+                        <li>Aprox. 500-600 €/mes</li>
+                    </ul>
+                    
+                    <p style="margin-top: 1rem;"><strong>Opción Parcial: Solo 3 días/semana</strong></p>
+                    <ul>
+                        <li>Reduces coste 40%</li>
+                        <li>Ideal si otros días hay otro familiar</li>
+                    </ul>
+                    
+                    <p style="margin-top: 1rem;"><strong>Opción Fin de Semana:</strong></p>
+                    <ul>
+                        <li>Solo sábado y domingo</li>
+                        <li>Tú descansas, yo cubro</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight-box">
+                    <p><strong>Lo importante:</strong> Hablemos y encontramos algo que funcione para tu situación y presupuesto real.</p>
+                    <p style="margin-top: 1rem;">No hay una fórmula única. Cada familia es diferente.</p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Precios Transparentes Des de El Inici</h3>
+                <p>Sin sorpresas. Te digo exactamente cuánto sería.</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Solicitar Presupuesto</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 4: Formas de Pago -->
+        <div id="detail-dinero-formas-pago" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('dinero')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">💳</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Formas de Pago y Facilidades</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "¿Cómo se paga? ¿Puedo pagarlo semanal o tiene que ser mensual?"
+                </p>
+                
+                <p><strong>Soy flexible con las formas de pago.</strong> Entiendo que cada familia tiene su situación.</p>
+                
+                <h3>Opciones de pago disponibles:</h3>
+                <div style="background: var(--bg-light); padding: 1.5rem; border-radius: var(--border-radius); margin: 1.5rem 0;">
+                    <p><strong>💵 Efectivo</strong></p>
+                    <ul>
+                        <li>Pago semanal o quincenal</li>
+                        <li>Recibo firmado siempre</li>
+                        <li>Lo más común y sencillo</li>
+                    </ul>
+                    
+                    <p style="margin-top: 1rem;"><strong>🏦 Transferencia Bancaria</strong></p>
+                    <ul>
+                        <li>Pago mensual, quincenal o semanal</li>
+                        <li>Más cómodo para ti</li>
+                        <li>Registro bancario</li>
+                    </ul>
+                    
+                    <p style="margin-top: 1rem;"><strong>📱 Bizum</strong></p>
+                    <ul>
+                        <li>Pago instantáneo</li>
+                        <li>Muy cómodo</li>
+                        <li>Sin comisiones</li>
+                    </ul>
+                </div>
+                
+                <h3>Frecuencia de pago (Tú eliges):</h3>
+                <ul>
+                    <li>✅ Semanal → Mejor para presupuestos ajustados</li>
+                    <li>✅ Quincenal → Lo más común</li>
+                    <li>✅ Mensual → Si prefieres hacer un solo pago</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Sin contratos largos. Sin permanencias.</strong></p>
+                    <p style="margin-top: 1rem;">Si en algún momento necesitas parar o reducir horas, hablamos y lo arreglamos. Así de simple.</p>
+                    <p style="margin-top: 1rem;">Mi objetivo es ayudarte, no complicarte la vida con burocracias.</p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Formas de Pago Flexibles</h3>
+                <p>Hablemos y encontramos la opción que te funcione</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Contactar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         MODAL: DUDAS (SUB-MENÚ)
+         ============================================ -->
+    <div class="modal-container" id="modal-dudas">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        
+        <!-- Sub-Menú -->
+        <div id="submenu-dudas" class="sub-menu">
+            <div class="modal-header">
+                <span class="modal-icon">🤔</span>
+                <h2 class="modal-title">No Sabes Si Es El Momento</h2>
+                <p class="modal-subtitle">¿Qué te impide decidir?</p>
+            </div>
+            
+            <div class="sub-cards-grid">
+                <div class="sub-card" onclick="showDetail('dudas', 'senales')">
+                    <span class="sub-card-icon">⚠️</span>
+                    <h3 class="sub-card-title">Señales de Alarma</h3>
+                    <p class="sub-card-hint">Test: ¿Necesita ayuda? →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('dudas', 'no-quiere')">
+                    <span class="sub-card-icon">🗣️</span>
+                    <h3 class="sub-card-title">"No Quiere Ayuda"</h3>
+                    <p class="sub-card-hint">Cómo introducir el cuidado →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('dudas', 'primera-visita')">
+                    <span class="sub-card-icon">✅</span>
+                    <h3 class="sub-card-title">Primera Visita Gratuita</h3>
+                    <p class="sub-card-hint">Sense compromís →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('dudas', 'niveles')">
+                    <span class="sub-card-icon">📊</span>
+                    <h3 class="sub-card-title">Niveles de Dependencia</h3>
+                    <p class="sub-card-hint">¿Qué nivel tiene? →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('dudas', 'cuando')">
+                    <span class="sub-card-icon">⏰</span>
+                    <h3 class="sub-card-title">¿Es Pronto o Tarde?</h3>
+                    <p class="sub-card-hint">El mejor momento →</p>
+                </div>
+                
+                <div class="sub-card" onclick="showDetail('dudas', 'preparar')">
+                    <span class="sub-card-icon">🏠</span>
+                    <h3 class="sub-card-title">Preparar la Casa</h3>
+                    <p class="sub-card-hint">Checklist adaptaciones →</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detalle 1: Señales -->
+        <div id="detail-dudas-senales" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('dudas')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">⚠️</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Señales de Alarma</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "¿Cómo sé si mi familiar realmente necesita ayuda profesional?"
+                </p>
+                
+                <div class="checklist-box">
+                    <h4>✓ 10 Señales que NO Puedes Ignorar:</h4>
+                    <p>Marca las que aplican a tu familiar:</p>
+                    <ul>
+                        <li>Ha perdido más de 5kg sin razón aparente</li>
+                        <li>La casa está sucia cuando antes era impecable</li>
+                        <li>Olvida apagar el gas/fuego/luces</li>
+                        <li>Tiene moretones sin explicación (caídas no reportadas)</li>
+                        <li>No se baña regularmente (percibes olor corporal)</li>
+                        <li>Usa el mismo pijama varios días seguidos</li>
+                        <li>Medicamentos sin tomar o tomados dos veces</li>
+                        <li>Confusión sobre día/hora/lugar</li>
+                        <li>No responde al teléfono frecuentemente</li>
+                        <li>Dice estar bien pero claramente no lo está</li>
+                    </ul>
+                </div>
+                
+                <div style="margin: 2rem 0; padding: 1.5rem; background: var(--primary-light); border-radius: var(--border-radius-lg); text-align: center;">
+                    <p style="font-size: 1.125rem; margin-bottom: 1rem; font-weight: 600; color: var(--primary-dark);"><strong>EVALUACIÓN:</strong></p>
+                    <p><strong>Marcaste 1-2:</strong> Vigilancia. Visitas más frecuentes.</p>
+                    <p><strong>Marcaste 3-5:</strong> Necesita ayuda regular YA.</p>
+                    <p><strong>Marcaste 6+:</strong> Situación urgente. Actúa hoy.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <p><strong>Si tienes dudas:</strong> Llámame. Puedo darte mi valoración profesional sin compromiso.</p>
+                    <p style="margin-top: 1rem;">A veces solo necesitas que alguien con experiencia te diga: "Sí, necesita ayuda" o "Todavía puede esperar un poco".</p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>¿Dudas Si Es El Momento?</h3>
+                <p>Valoración gratuita. Te diré la verdad aunque no me contrates.</p>
+                <a href="tel:+34611230547" class="btn btn-secondary btn-large">📞 611 230 547</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 2: No quiere ayuda -->
+        <div id="detail-dudas-no-quiere" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('dudas')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">🗣️</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">"No Quiere Ayuda"</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "Mi padre/madre se niega. Dice que puede solo/a..."
+                </p>
+                
+                <p><strong>Claro que lo dice.</strong> Nadie quiere admitir que necesita ayuda.</p>
+                
+                <p>Es:</p>
+                <ul>
+                    <li><strong>Orgullo:</strong> "Toda mi vida fui independiente"</li>
+                    <li><strong>Miedo:</strong> "Si acepto ayuda, es el principio del fin"</li>
+                    <li><strong>Negación:</strong> "No estoy tan mal"</li>
+                    <li><strong>Preocupación por ti:</strong> "No quiero ser una carga"</li>
+                </ul>
+                
+                <h3>Tu trabajo no es esperar su permiso. Es protegerle.</h3>
+                
+                <div style="background: var(--bg-light); padding: 1.5rem; border-radius: var(--border-radius); margin: 1.5rem 0;">
+                    <h4 style="color: var(--primary-dark); margin-bottom: 1rem;">Tips para introducir ayuda sin conflicto:</h4>
+                    <ul>
+                        <li>✅ Preséntalo como <strong>"compañía"</strong>, no como "cuidado"</li>
+                        <li>✅ "Alguien que te ayude con las tareas pesadas"</li>
+                        <li>✅ "Solo viene 2 horitas, para que no estés solo/a"</li>
+                        <li>✅ Empieza con pocas horas, construye confianza</li>
+                        <li>✅ Deja que nos conozcan primero (visita gratuita)</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight-box">
+                    <p><strong>Mi experiencia:</strong> El 90% de las personas mayores que "no querían ayuda" terminan encantadas.</p>
+                    <p style="margin-top: 1rem;">Una vez me conozcan, todo cambia. Lo he visto varias veces.</p>
+                    <p style="margin-top: 1rem;"><strong>La clave es el enfoque gradual y respetuoso.</strong></p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Te Ayudo a Introducir el Cuidado Sin Conflicto</h3>
+                <p>Tengo experiencia en estos casos. Hablemos de estrategia.</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Contáctame</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 3: Primera visita -->
+        <div id="detail-dudas-primera-visita" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('dudas')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">✅</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Primera Visita Gratuita</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "¿Y si contrato y luego no funciona? ¿Y si no nos llevamos bien?"
+                </p>
+                
+                <p><strong>Por eso ofrezco una primera visita GRATUITA y sin compromiso.</strong></p>
+                
+                <h3>Cómo funciona:</h3>
+                
+                <div style="background: var(--primary-light); padding: 2rem; border-radius: var(--border-radius); margin: 1.5rem 0;">
+                    <p style="font-weight: 600; color: var(--primary-dark); margin-bottom: 1rem;">📅 Paso 1: Primera Visita (GRATIS)</p>
+                    <ul>
+                        <li>Voy a tu casa/casa de tu familiar</li>
+                        <li>Ens coneixem tu, el teu familiar i jo</li>
+                        <li>Veo qué necesita realmente</li>
+                        <li>Te doy mi valoración profesional honesta</li>
+                        <li><strong>Cero presión. Cero compromiso.</strong></li>
+                    </ul>
+                    
+                    <p style="font-weight: 600; color: var(--primary-dark); margin: 1.5rem 0 1rem;">🤝 Paso 2: Decidimos Juntos</p>
+                    <ul>
+                        <li>Si hay buena conexión → Seguimos</li>
+                        <li>Si tienes dudas → Te doy tiempo para pensar</li>
+                        <li>Si no encaja → No pasa nada, al menos tienes información</li>
+                    </ul>
+                    
+                    <p style="font-weight: 600; color: var(--primary-dark); margin: 1.5rem 0 1rem;">✅ Paso 3: Empezamos Gradual</p>
+                    <ul>
+                        <li>Pocas horas al principio</li>
+                        <li>Vamos viendo cómo va</li>
+                        <li>Ajustamos según necesidad</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight-box">
+                    <p><strong>Garantía simple:</strong> Si en la primera semana ves que no funciona, lo dejamos. Sin dramas, sin compromisos largos.</p>
+                    <p style="margin-top: 1rem;">Así de simple y transparente.</p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Empecemos Sin Compromís</h3>
+                <p>Agenda tu primera visita gratuita</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Agendar Visita</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 4: Niveles de Dependencia -->
+        <div id="detail-dudas-niveles" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('dudas')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">📊</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Niveles de Dependencia</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "¿Qué nivel de ayuda necesita realmente mi familiar?"
+                </p>
+                
+                <p><strong>No todas las personas mayores necesitan el mismo tipo de cuidado.</strong> Aquí te ayudo a identificar el nivel:</p>
+                
+                <div style="margin: 2rem 0;">
+                    <div style="background: #E8F9F3; padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 1rem; border-left: 4px solid #52B788;">
+                        <h4 style="color: #2D6A4F; margin-bottom: 1rem;">🟢 DEPENDENCIA LEVE</h4>
+                        <p><strong>Puede hacer casi todo solo/a, pero necesita:</strong></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Recordatorios de medicación</li>
+                            <li>Ayuda con tareas pesadas (limpiar, cocinar platos complejos)</li>
+                            <li>Compañía para no sentirse solo/a</li>
+                            <li>Apoyo puntual (ir al médico, compras)</li>
+                        </ul>
+                        <p style="margin-top: 1rem;"><strong>Solución:</strong> 2-4 horas/día, 3-5 días/semana</p>
+                    </div>
+                    
+                    <div style="background: #FFF3E0; padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 1rem; border-left: 4px solid #F4A261;">
+                        <h4 style="color: #D87F3F; margin-bottom: 1rem;">🟡 DEPENDENCIA MODERADA</h4>
+                        <p><strong>Necesita ayuda regular con:</strong></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Baño e higiene personal</li>
+                            <li>Preparación de comidas</li>
+                            <li>Control estricto de medicación</li>
+                            <li>Movilidad (andador, ayuda para levantarse)</li>
+                            <li>Supervisión constante algunas horas</li>
+                        </ul>
+                        <p style="margin-top: 1rem;"><strong>Solución:</strong> 4-6 horas/día, todos los días</p>
+                    </div>
+                    
+                    <div style="background: #FFE5E5; padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 1rem; border-left: 4px solid #E76F51;">
+                        <h4 style="color: #C1121F; margin-bottom: 1rem;">🔴 DEPENDENCIA ALTA</h4>
+                        <p><strong>Necesita ayuda con casi todo:</strong></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Higiene completa</li>
+                            <li>Alimentación asistida</li>
+                            <li>Movilidad completa (silla de ruedas, cama)</li>
+                            <li>Supervisió contínua</li>
+                            <li>Cuidados especializados</li>
+                        </ul>
+                        <p style="margin-top: 1rem;"><strong>Solución:</strong> Jornada completa o atención interna</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <p><strong>¿No sabes en qué nivel está tu familiar?</strong></p>
+                    <p style="margin-top: 1rem;">En la primera visita gratuita, puedo evaluarlo y decirte exactamente qué tipo de atención necesita.</p>
+                    <p style="margin-top: 1rem;">Te daré mi opinión profesional honesta, sin presión para contratar más de lo necesario.</p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Evaluación Profesional Gratuita</h3>
+                <p>Te diré exactamente qué nivel de ayuda necesita</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Agendar Evaluación</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 5: ¿Es Pronto o Tarde? -->
+        <div id="detail-dudas-cuando" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('dudas')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">⏰</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">¿Es Demasiado Pronto o Tarde?</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "¿No será muy pronto? Todavía puede hacer cosas solo/a..."
+                </p>
+                
+                <p><strong>Esta es una de las dudas más comunes. Y la respuesta es:</strong></p>
+                
+                <div style="background: var(--primary-light); padding: 2rem; border-radius: var(--border-radius); margin: 2rem 0; text-align: center;">
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 1rem;">
+                        Es mejor empezar ANTES que DESPUÉS
+                    </p>
+                    <p style="color: var(--text-dark);">La prevención siempre es más efectiva que la reacción.</p>
+                </div>
+                
+                <h3>Por qué empezar temprano:</h3>
+                <ul>
+                    <li><strong>Adaptación gradual:</strong> Tu familiar se acostumbra poco a poco</li>
+                    <li><strong>Prevención:</strong> Evitas crisis y emergencias</li>
+                    <li><strong>Construcción de confianza:</strong> Genera vínculo antes de necesidad urgente</li>
+                    <li><strong>Menos resistencia:</strong> Acepta mejor la ayuda si todavía está lúcido/a</li>
+                    <li><strong>Mejor calidad de vida:</strong> Previene deterioro, no solo lo gestiona</li>
+                </ul>
+                
+                <h3>Señales de que es el momento:</h3>
+                <ul>
+                    <li>Si te estás haciendo esta pregunta → <strong>Probablemente ya es momento</strong></li>
+                    <li>Si has notado cambios → No esperes a que empeoren</li>
+                    <li>Si tienes miedo constante → Ya afecta tu vida, es momento</li>
+                    <li>Si tu familiar tuvo un "casi accidente" → Próxima vez puede ser real</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>"Pero todavía puede hacer cosas solo/a"</strong></p>
+                    <p style="margin-top: 0.5rem;">Perfecto. Ese es EL MEJOR momento para empezar. Cuando todavía tiene autonomía pero necesita apoyo.</p>
+                    <p style="margin-top: 1rem; font-weight: 600;">No esperes a la crisis. Es mucho más difícil empezar cuando ya hay una emergencia.</p>
+                </div>
+                
+                <p style="font-size: 1.125rem; background: var(--primary-light); padding: 1.5rem; border-radius: var(--border-radius); margin-top: 2rem; text-align: center; font-weight: 600;">
+                    Nunca es "demasiado pronto" para prevenir. Pero sí puede ser "demasiado tarde" si esperas.
+                </p>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>El Mejor Momento es AHORA</h3>
+                <p>Pregúntame sin compromiso. Te diré la verdad.</p>
+                <a href="tel:+34611230547" class="btn btn-secondary btn-large">📞 611 230 547</a>
+            </div>
+        </div>
+        
+        <!-- Detalle 6: Preparar la Casa -->
+        <div id="detail-dudas-preparar" class="detail-view">
+            <button class="back-button" onclick="backToSubMenu('dudas')">← Volver a Opciones</button>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span style="font-size: 4rem;">🏠</span>
+                <h2 style="color: var(--primary-dark); font-size: 2rem; margin-top: 1rem;">Preparar la Casa para el Cuidado</h2>
+            </div>
+            
+            <div class="detail-content">
+                <p style="font-style: italic; color: var(--text-gray); font-size: 1.125rem; background: var(--bg-light); padding: 1rem; border-radius: var(--border-radius);">
+                    "¿Qué necesito tener listo antes de que empieces?"
+                </p>
+                
+                <p><strong>No necesitas hacer grandes cambios.</strong> Pero hay algunas cosas que facilitan el cuidado:</p>
+                
+                <div class="checklist-box">
+                    <h4>✓ Checklist Básico de Preparación:</h4>
+                    <ul>
+                        <li><strong>Medicación:</strong> Todas las recetas en un lugar, lista actualizada</li>
+                        <li><strong>Contactes médicos:</strong> Teléfono del médico de cabecera, especialistas</li>
+                        <li><strong>Alergias/Intolerancias:</strong> Lista escrita visible</li>
+                        <li><strong>Rutina habitual:</strong> Horarios que sigue normalmente</li>
+                        <li><strong>Preferencias:</strong> Comidas que le gustan/disgustan, actividades</li>
+                        <li><strong>Tu teléfono:</strong> Para localizarte siempre</li>
+                    </ul>
+                </div>
+                
+                <h3>Adaptaciones útiles (no obligatorias):</h3>
+                <ul>
+                    <li>Barras de apoyo en baño</li>
+                    <li>Alfombra antideslizante en ducha</li>
+                    <li>Luz nocturna en pasillo</li>
+                    <li>Silla para la ducha</li>
+                    <li>Pastillero semanal</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>No te agobies con esto.</strong></p>
+                    <p style="margin-top: 1rem;">En la primera visita gratuita, evalúo la casa y te digo exactamente qué sería útil tener. Muchas cosas se pueden ir haciendo poco a poco.</p>
+                    <p style="margin-top: 1rem;"><strong>No necesitas tener todo perfecto para empezar.</strong></p>
+                </div>
+            </div>
+            
+            <div class="detail-cta">
+                <h3>Evaluación del Hogar Incluida</h3>
+                <p>En la primera visita veo qué necesitas y qué no</p>
+                <a href="index.html#contacto" class="btn btn-secondary btn-large">Agendar Visita</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Final -->
+    <section style="background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%); color: white; padding: 4rem 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">¿Hablamos?</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Si has llegado hasta aquí, es porque realmente necesitas ayuda. Y está bien pedirla.
+            </p>
+            <p style="font-size: 1.125rem; margin-bottom: 2rem;">
+                No tienes que tomar una decisión ahora. Empecemos con una conversación.
+            </p>
+            <div style="margin: 2rem 0;">
+                <a href="tel:+34611230547" class="btn btn-secondary btn-large" style="margin: 0.5rem;">
+                    📞 Llamar: 611 230 547
+                </a>
+                <a href="index.html#contacto" class="btn btn-light btn-large" style="margin: 0.5rem;">
+                    ✉️ Enviar Mensaje
+                </a>
+            </div>
+            <p style="font-size: 1rem; opacity: 0.9;">
+                Respondo personalmente. Normalmente en menos de 2 horas.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Carmen Alvarado</h3>
+                    <p>Cuidadora Profesional a Tarragona</p>
+                    <div class="footer-contact">
+                        <p>📞 <a href="tel:+34611230547">611 230 547</a></p>
+                        <p>✉️ <a href="mailto:calvarado1873@gmail.com">calvarado1873@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Carmen Alvarado - Tots els drets reservats</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/34611230547?text=Hola%20Carmen,%20he%20visto%20Te%20Ayudamos%20y%20necesito%20hablar" 
+       class="whatsapp-float" 
+       target="_blank"
+       aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" width="32" height="32">
+            <path fill="currentColor" d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.978 0-7.51 6.11-13.62 13.62-13.62s13.62 6.11 13.62 13.62c0 7.51-6.11 13.62-13.62 13.62zM21.305 19.26c-0.346-0.174-2.049-1.007-2.366-1.123-0.316-0.116-0.547-0.174-0.776 0.174s-0.893 1.123-1.094 1.347c-0.201 0.228-0.402 0.256-0.748 0.082-0.346-0.174-1.461-0.539-2.785-1.722-1.031-0.922-1.727-2.061-1.929-2.407-0.201-0.346-0.021-0.533 0.152-0.705 0.156-0.155 0.346-0.402 0.518-0.603 0.174-0.201 0.231-0.346 0.346-0.574 0.116-0.228 0.058-0.428-0.028-0.603-0.087-0.174-0.776-1.87-1.063-2.565-0.28-0.672-0.561-0.580-0.776-0.591-0.201-0.010-0.431-0.012-0.661-0.012s-0.603 0.087-0.919 0.431c-0.316 0.346-1.206 1.179-1.206 2.873s1.235 3.333 1.406 3.561c0.174 0.228 2.421 3.697 5.864 5.186 0.819 0.354 1.458 0.566 1.955 0.724 0.822 0.262 1.571 0.225 2.162 0.136 0.66-0.099 2.049-0.837 2.335-1.645 0.288-0.808 0.288-1.501 0.201-1.645-0.086-0.146-0.316-0.231-0.662-0.405z"/>
+        </svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Sistema de Navegación de 2 Niveles
+        function showSubMenu(category) {
+            closeModal(); // Cerrar cualquier otro
+            
+            const overlay = document.getElementById('modalOverlay');
+            const modal = document.getElementById('modal-' + category);
+            const submenu = document.getElementById('submenu-' + category);
+            
+            if (overlay && modal && submenu) {
+                overlay.classList.add('active');
+                modal.classList.add('active');
+                submenu.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                
+                // Ocultar todos los detalles de esta categoría
+                const details = modal.querySelectorAll('.detail-view');
+                details.forEach(d => d.classList.remove('active'));
+            }
+        }
+        
+        function showDetail(category, detail) {
+            const modal = document.getElementById('modal-' + category);
+            const submenu = document.getElementById('submenu-' + category);
+            const detailView = document.getElementById('detail-' + category + '-' + detail);
+            
+            if (modal && submenu && detailView) {
+                // Ocultar sub-menú
+                submenu.classList.add('hidden');
+                
+                // Ocultar otros detalles
+                const allDetails = modal.querySelectorAll('.detail-view');
+                allDetails.forEach(d => d.classList.remove('active'));
+                
+                // Mostrar detalle seleccionado
+                detailView.classList.add('active');
+                
+                // Scroll al top del modal
+                modal.scrollTop = 0;
+            }
+        }
+        
+        function backToSubMenu(category) {
+            const submenu = document.getElementById('submenu-' + category);
+            const modal = document.getElementById('modal-' + category);
+            const details = modal.querySelectorAll('.detail-view');
+            
+            // Mostrar sub-menú
+            submenu.classList.remove('hidden');
+            
+            // Ocultar todos los detalles
+            details.forEach(d => d.classList.remove('active'));
+            
+            // Scroll al top
+            modal.scrollTop = 0;
+        }
+        
+        function closeModal() {
+            const overlay = document.getElementById('modalOverlay');
+            const modals = document.querySelectorAll('.modal-container');
+            
+            if (overlay) overlay.classList.remove('active');
+            
+            modals.forEach(modal => {
+                modal.classList.remove('active');
+                
+                // Reset: Mostrar sub-menú, ocultar detalles
+                const submenu = modal.querySelector('.sub-menu');
+                if (submenu) submenu.classList.remove('hidden');
+                
+                const details = modal.querySelectorAll('.detail-view');
+                details.forEach(d => d.classList.remove('active'));
+            });
+            
+            document.body.style.overflow = '';
+        }
+        
+        // Cerrar modal con tecla ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
