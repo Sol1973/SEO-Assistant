@@ -91,29 +91,61 @@ async function getAuditResults(auditId) {
  * Display audit results
  */
 function displayResults(data) {
-  // Validar que data y results existen
-  if (!data || !data.results) {
-    console.error('Error: datos de auditoría inválidos', data);
-    showAlert('Error: La auditoría no se completó correctamente. Por favor, intenta de nuevo.', 'warning');
+  // Validar que data existe
+  if (!data) {
+    console.error('Error: data is null or undefined');
+    showAlert('Error: No se recibieron datos del servidor.', 'danger');
     return;
   }
   
+  // Validar estado de la auditoría
+  if (data.status === 'failed') {
+    showAlert('La auditoría falló. Por favor, verifica la URL e intenta de nuevo.', 'danger');
+    return;
+  }
+  
+  if (data.status === 'processing') {
+    showAlert('La auditoría aún está en proceso. Espera unos segundos...', 'info');
+    return;
+  }
+  
+  // Validar que results existe
+  if (!data.results) {
+    console.error('Error: results is null', data);
+    showAlert('La auditoría se completó pero no hay resultados disponibles. Intenta con otra URL.', 'warning');
+    return;
+  }
+  
+  // Parsear results si es string
   const results = typeof data.results === 'string' ? JSON.parse(data.results) : data.results;
   
-  // Validar que results tiene las propiedades necesarias
+  // Validar estructura de results
+  if (!results || typeof results !== 'object') {
+    console.error('Error: results no es un objeto válido', results);
+    showAlert('Error: La estructura de resultados es inválida.', 'danger');
+    return;
+  }
+  
   if (!results.metaTags || !results.headings || !results.images) {
-    console.error('Error: estructura de resultados inválida', results);
-    showAlert('Error: Los resultados de la auditoría están incompletos.', 'warning');
+    console.error('Error: faltan propiedades en results', results);
+    showAlert('Los resultados están incompletos. Algunas secciones no pudieron analizarse.', 'warning');
     return;
   }
   
   const html = `
-    <div class="row g-4">
+    <div class="alert alert-success mb-4">
+      <h4><i class="fas fa-check-circle me-2"></i>Auditoría Completada</h4>
+      <p class="mb-0"><strong>URL:</strong> ${data.url}</p>
+      <p class="mb-0"><strong>Score General:</strong> ${data.overallScore}/100</p>
+    </div>
+    
+    <div class="row g-4 mb-4">
       <div class="col-md-4">
         <div class="score-card ${getScoreClass(results.metaTags.score || 0)}">
           <div class="score-label">Meta Tags</div>
           <div class="score-value">${results.metaTags.score || 0}</div>
           <div class="traffic-light ${getTrafficLight(results.metaTags.score || 0)}"></div>
+          <div class="score-description">/100</div>
         </div>
       </div>
       <div class="col-md-4">
@@ -121,6 +153,7 @@ function displayResults(data) {
           <div class="score-label">Headings</div>
           <div class="score-value">${results.headings.score || 0}</div>
           <div class="traffic-light ${getTrafficLight(results.headings.score || 0)}"></div>
+          <div class="score-description">/100</div>
         </div>
       </div>
       <div class="col-md-4">
@@ -128,20 +161,36 @@ function displayResults(data) {
           <div class="score-label">Imágenes</div>
           <div class="score-value">${results.images.score || 0}</div>
           <div class="traffic-light ${getTrafficLight(results.images.score || 0)}"></div>
+          <div class="score-description">/100</div>
         </div>
       </div>
     </div>
     
-    <div class="mt-4">
-      <button class="btn btn-primary btn-lg" onclick="generateReport('${data.auditId}')">
+    <div class="text-center mt-4">
+      <button class="btn btn-primary btn-lg me-2" id="btnGenerateReport" data-audit-id="${data.auditId}">
         <i class="fas fa-download me-2"></i>
-        Descargar Reporte PDF
+        Descargar Reporte
+      </button>
+      <button class="btn btn-outline-secondary btn-lg" id="btnNewAudit">
+        <i class="fas fa-redo me-2"></i>
+        Nueva Auditoría
       </button>
     </div>
   `;
   
   resultsContent.innerHTML = html;
   resultsSection.classList.remove('d-none');
+  
+  // Agregar event listeners a los botones
+  document.getElementById('btnGenerateReport')?.addEventListener('click', function() {
+    generateReport(this.dataset.auditId);
+  });
+  
+  document.getElementById('btnNewAudit')?.addEventListener('click', function() {
+    resultsSection.classList.add('d-none');
+    websiteUrl.value = '';
+    websiteUrl.focus();
+  });
   resultsSection.classList.add('fade-in');
   
   // Scroll to results
