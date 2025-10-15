@@ -33,7 +33,7 @@ app.use(helmet({
       scriptSrc: ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net", "https://cdnjs.cloudflare.com"],
       fontSrc: ["'self'", "https://cdnjs.cloudflare.com"],
       imgSrc: ["'self'", "data:", "https:"],
-      connectSrc: ["'self'", "https://cdn.jsdelivr.net"] // Permite source maps
+      connectSrc: ["'self'", "https://cdn.jsdelivr.net", "http://localhost:3000"] // Permite source maps y API local
     }
   }
 }));
