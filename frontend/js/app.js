@@ -310,17 +310,34 @@ function showAlert(message, type = 'info') {
  * Show loading
  */
 function showLoading() {
+  // Eliminar overlay existente
+  hideLoading();
+  
   const loadingDiv = document.createElement('div');
   loadingDiv.id = 'loadingSpinner';
-  loadingDiv.className = 'position-fixed top-50 start-50 translate-middle';
-  loadingDiv.style.zIndex = '9999';
+  loadingDiv.className = 'loading-overlay';
   loadingDiv.innerHTML = `
-    <div class="spinner-border text-primary" role="status">
-      <span class="visually-hidden">Cargando...</span>
+    <div class="text-center">
+      <div class="spinner-custom mb-3"></div>
+      <h4 class="text-primary" id="loadingTitle">Analizando sitio web...</h4>
+      <p class="text-muted" id="loadingMessage">Esto puede tardar algunos segundos</p>
+      <div class="mt-3">
+        <small class="text-muted">No cierres esta ventana</small>
+      </div>
     </div>
   `;
   
   document.body.appendChild(loadingDiv);
+}
+
+/**
+ * Update loading message
+ */
+function updateLoadingMessage(message) {
+  const loadingMessage = document.getElementById('loadingMessage');
+  if (loadingMessage) {
+    loadingMessage.textContent = message;
+  }
 }
 
 /**
