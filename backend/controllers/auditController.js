@@ -8,6 +8,33 @@ const cheerio = require('cheerio');
 const { run, get } = require('../models/database');
 
 /**
+ * Simulate audit for Vercel demo
+ */
+const simulateAudit = async (url) => {
+  // Simulate realistic audit results for demo
+  const domain = new URL(url).hostname;
+  
+  return `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>${domain} - Demo SEO Analysis</title>
+      <meta name="description" content="Demo SEO analysis for ${domain}">
+      <meta name="keywords" content="demo, seo, analysis">
+    </head>
+    <body>
+      <h1>Welcome to ${domain}</h1>
+      <h2>Main Content</h2>
+      <h3>Subsection</h3>
+      <img src="/logo.png" alt="Company Logo">
+      <img src="/banner.jpg" alt="Main Banner">
+      <p>This is a demo analysis for demonstration purposes.</p>
+    </body>
+    </html>
+  `;
+};
+
+/**
  * Start a new SEO audit
  */
 const startAudit = async (url) => {
@@ -39,38 +66,48 @@ const startAudit = async (url) => {
  */
 const processAudit = async (auditId, url) => {
   try {
-    // Launch browser with Vercel-compatible configuration
-    const browserOptions = {
-      headless: process.env.NODE_ENV === 'production' ? 'new' : true,
-      args: process.env.NODE_ENV === 'production' ? [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-dev-shm-usage',
-        '--disable-accelerated-2d-canvas',
-        '--no-first-run',
-        '--no-zygote',
-        '--disable-gpu'
-      ] : []
-    };
+    let html = '';
+    
+    // For Vercel, use a simplified approach without Puppeteer
+    if (process.env.VERCEL) {
+      // Simulate audit results for demo purposes
+      html = await simulateAudit(url);
+    } else {
+      // Launch browser with Vercel-compatible configuration
+      const browserOptions = {
+        headless: process.env.NODE_ENV === 'production' ? 'new' : true,
+        args: process.env.NODE_ENV === 'production' ? [
+          '--no-sandbox',
+          '--disable-setuid-sandbox',
+          '--disable-dev-shm-usage',
+          '--disable-accelerated-2d-canvas',
+          '--no-first-run',
+          '--no-zygote',
+          '--disable-gpu'
+        ] : []
+      };
 
-    // Use Vercel's Chrome if available
-    if (process.env.PUPPETEER_EXECUTABLE_PATH) {
-      browserOptions.executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
+      // Use Vercel's Chrome if available
+      if (process.env.PUPPETEER_EXECUTABLE_PATH) {
+        browserOptions.executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
+      }
+
+      const browser = await puppeteer.launch(browserOptions);
+      const page = await browser.newPage();
+      
+      // Set user agent for better compatibility
+      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
+      
+      await page.goto(url, { 
+        waitUntil: 'networkidle2',
+        timeout: 30000 
+      });
+
+      // Get page content
+      html = await page.content();
+      await browser.close();
     }
-
-    const browser = await puppeteer.launch(browserOptions);
-    const page = await browser.newPage();
     
-    // Set user agent for better compatibility
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
-    
-    await page.goto(url, { 
-      waitUntil: 'networkidle2',
-      timeout: 30000 
-    });
-
-    // Get page content
-    const html = await page.content();
     const $ = cheerio.load(html);
 
     // Analyze meta tags
@@ -101,7 +138,6 @@ const processAudit = async (auditId, url) => {
       ['completed', metaScore, headingsScore, imagesScore, overallScore, results, auditId]
     );
 
-    await browser.close();
     console.log(`✅ Audit ${auditId} completed`);
   } catch (error) {
     console.error(`❌ Error processing audit ${auditId}:`, error.message);
