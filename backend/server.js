@@ -115,8 +115,8 @@ app.listen(PORT, () => {
 // Export app for Vercel
 module.exports = app;
 
-// Solo iniciar servidor si no estamos en Vercel
-if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+// Solo iniciar servidor si no estamos en Vercel y no se está ejecutando como módulo
+if (require.main === module && (process.env.NODE_ENV !== 'production' || !process.env.VERCEL)) {
   app.listen(PORT, () => {
     console.log(`
 ╔════════════════════════════════════════════╗
