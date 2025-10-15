@@ -7,12 +7,12 @@ const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const fs = require('fs');
 
-// Database path
-const DB_DIR = path.join(__dirname, '../../data');
+// Database path - Vercel compatible
+const DB_DIR = process.env.VERCEL ? '/tmp' : path.join(__dirname, '../../data');
 const DB_PATH = path.join(DB_DIR, 'seo-assistant.db');
 
-// Ensure data directory exists
-if (!fs.existsSync(DB_DIR)) {
+// Ensure data directory exists (only in local development)
+if (!process.env.VERCEL && !fs.existsSync(DB_DIR)) {
   fs.mkdirSync(DB_DIR, { recursive: true });
 }
 
