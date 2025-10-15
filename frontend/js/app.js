@@ -91,29 +91,43 @@ async function getAuditResults(auditId) {
  * Display audit results
  */
 function displayResults(data) {
-  const { results } = data;
+  // Validar que data y results existen
+  if (!data || !data.results) {
+    console.error('Error: datos de auditoría inválidos', data);
+    showAlert('Error: La auditoría no se completó correctamente. Por favor, intenta de nuevo.', 'warning');
+    return;
+  }
+  
+  const results = typeof data.results === 'string' ? JSON.parse(data.results) : data.results;
+  
+  // Validar que results tiene las propiedades necesarias
+  if (!results.metaTags || !results.headings || !results.images) {
+    console.error('Error: estructura de resultados inválida', results);
+    showAlert('Error: Los resultados de la auditoría están incompletos.', 'warning');
+    return;
+  }
   
   const html = `
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="score-card ${getScoreClass(results.metaTags.score)}">
+        <div class="score-card ${getScoreClass(results.metaTags.score || 0)}">
           <div class="score-label">Meta Tags</div>
-          <div class="score-value">${results.metaTags.score}</div>
-          <div class="traffic-light ${getTrafficLight(results.metaTags.score)}"></div>
+          <div class="score-value">${results.metaTags.score || 0}</div>
+          <div class="traffic-light ${getTrafficLight(results.metaTags.score || 0)}"></div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="score-card ${getScoreClass(results.headings.score)}">
+        <div class="score-card ${getScoreClass(results.headings.score || 0)}">
           <div class="score-label">Headings</div>
-          <div class="score-value">${results.headings.score}</div>
-          <div class="traffic-light ${getTrafficLight(results.headings.score)}"></div>
+          <div class="score-value">${results.headings.score || 0}</div>
+          <div class="traffic-light ${getTrafficLight(results.headings.score || 0)}"></div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="score-card ${getScoreClass(results.images.score)}">
+        <div class="score-card ${getScoreClass(results.images.score || 0)}">
           <div class="score-label">Imágenes</div>
-          <div class="score-value">${results.images.score}</div>
-          <div class="traffic-light ${getTrafficLight(results.images.score)}"></div>
+          <div class="score-value">${results.images.score || 0}</div>
+          <div class="traffic-light ${getTrafficLight(results.images.score || 0)}"></div>
         </div>
       </div>
     </div>
