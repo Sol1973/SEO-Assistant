@@ -7,7 +7,10 @@
 // CONFIG
 // ============================================
 
-const API_BASE_URL = 'http://localhost:3000/api';
+// Dynamic API URL based on environment
+const API_BASE_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:3000/api'
+  : '/api';
 
 // ============================================
 // DOM ELEMENTS
