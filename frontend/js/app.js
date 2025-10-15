@@ -71,20 +71,66 @@ async function handleAuditSubmit(e) {
 }
 
 /**
- * Get audit results
+ * Get audit results with polling
+ * Espera a que la auditoría se complete antes de mostrar resultados
  */
 async function getAuditResults(auditId) {
-  try {
-    const response = await fetch(`${API_BASE_URL}/audit/${auditId}`);
-    const data = await response.json();
-    
-    if (data.success) {
-      displayResults(data.data);
+  const maxAttempts = 20; // Máximo 20 intentos
+  const interval = 1000; // Cada 1 segundo
+  let attempts = 0;
+  
+  const checkStatus = async () => {
+    try {
+      attempts++;
+      
+      const response = await fetch(`${API_BASE_URL}/audit/${auditId}`);
+      const data = await response.json();
+      
+      if (!data.success) {
+        throw new Error('Error obteniendo resultados');
+      }
+      
+      const audit = data.data;
+      
+      // Si está completada, mostrar resultados
+      if (audit.status === 'completed') {
+        hideLoading();
+        displayResults(audit);
+        return;
+      }
+      
+      // Si falló, mostrar error
+      if (audit.status === 'failed') {
+        hideLoading();
+        showAlert('La auditoría falló. Verifica la URL e intenta de nuevo.', 'danger');
+        return;
+      }
+      
+      // Si todavía está procesando
+      if (audit.status === 'processing' || audit.status === 'pending') {
+        if (attempts >= maxAttempts) {
+          hideLoading();
+          showAlert('La auditoría está tardando demasiado. Intenta de nuevo más tarde.', 'warning');
+          return;
+        }
+        
+        // Mostrar mensaje de progreso
+        updateLoadingMessage(`Analizando... (${attempts}/${maxAttempts})`);
+        
+        // Reintentar después del intervalo
+        setTimeout(checkStatus, interval);
+        return;
+      }
+      
+    } catch (error) {
+      console.error('Error:', error);
+      hideLoading();
+      showAlert('Error al obtener los resultados', 'danger');
     }
-  } catch (error) {
-    console.error('Error:', error);
-    showAlert('Error al obtener los resultados', 'danger');
-  }
+  };
+  
+  // Iniciar polling
+  await checkStatus();
 }
 
 /**
