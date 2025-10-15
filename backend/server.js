@@ -1,6 +1,6 @@
 /**
  * SEO ASSISTANT - SERVER PRINCIPAL
- * Servidor Express para la aplicación web local
+ * Servidor Express para aplicación local y deploy en Vercel
  */
 
 const express = require('express');
@@ -8,7 +8,11 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const path = require('path');
-require('dotenv').config();
+
+// Solo cargar dotenv en desarrollo local
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 // Initialize database
 require('./models/database');
@@ -108,5 +112,21 @@ app.listen(PORT, () => {
   `);
 });
 
+// Export app for Vercel
 module.exports = app;
+
+// Solo iniciar servidor si no estamos en Vercel
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`
+╔════════════════════════════════════════════╗
+║   SEO ASSISTANT - Server Running 🚀       ║
+╠════════════════════════════════════════════╣
+║   Port: ${PORT}                              ║
+║   URL: http://localhost:${PORT}              ║
+║   Environment: ${process.env.NODE_ENV || 'development'}           ║
+╚════════════════════════════════════════════╝
+    `);
+  });
+}
 
